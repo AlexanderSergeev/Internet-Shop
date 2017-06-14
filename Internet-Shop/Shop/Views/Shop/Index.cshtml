@@ -1,0 +1,16 @@
+﻿@using Shop.Models
+@model Car
+@{
+    ViewBag.Title = "Internet-shop";
+}
+<br>
+<div style="overflow:auto; height:270px;" id="chat">
+    @foreach (Car c in ViewBag.Cars)
+    {
+        <p>
+            <b>@c.Id</b>
+            @c.Name
+        </p>
+    }
+</div>
+
