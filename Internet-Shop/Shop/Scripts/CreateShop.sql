@@ -10,13 +10,14 @@ go
 use Shop;
 go
 
---Таблица сообщений
+--Таблица машин
 create table Cars (
-	Id int IDENTITY,
-	Name text		  --название		
+	Id int identity,    
+	Name text,			
+	Price money		
 );
 
 insert into Cars values
-('Audi'),
-('Chevrolet'),
-('Volkswagen');
+('Audi', 120.99),
+('Chevrolet', 240.787),
+('Volkswagen', 360);

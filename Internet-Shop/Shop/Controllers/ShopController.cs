@@ -16,6 +16,7 @@ namespace Shop.Controllers
         {
             IEnumerable<Car> cars = repo.GetCars();
             ViewBag.Cars = cars;
+
             return View();
         }
     }
