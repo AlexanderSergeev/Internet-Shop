@@ -1,17 +1,26 @@
-﻿@using Shop.Models
-@model Car
-@{
-    ViewBag.Title = "Internet-shop";
-}
-<br>
-<div style="overflow:auto; height:270px;" id="chat">
-    @foreach (Car c in ViewBag.Cars)
-    {
-        <p>
-            <b>@c.Id</b>
-            Название: @c.Name
-            Цена: @c.Price $
-        </p>
-    }
-</div>
+﻿<!DOCTYPE html>
 
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=7; IE=Edge">
+  <title>
+    Internet-shop
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div style="overflow: auto; height: 270px;" id="chat">
+    <!-- foreach (Car c in ViewBag.Cars) -->
+
+    <p>
+      <b>Название:</b>
+    </p>
+    <p>
+      <b>Цена:</b> $
+    </p>
+
+  </div>
+</body>
+</html>

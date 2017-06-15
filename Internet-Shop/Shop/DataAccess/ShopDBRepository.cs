@@ -4,13 +4,13 @@ using System.Data.Entity;
 
 namespace Shop.DataAccess
 {
-    public class ShopDBRepository : IShopDBRepository
+    public class ShopDbRepository : IShopDbRepository
     {
-        private ShopDBContext context;
+        private readonly ShopDbContext context;
 
-        public ShopDBRepository()
+        public ShopDbRepository()
         {
-            context = new ShopDBContext(ConfigurationManager.ConnectionStrings["PrimaryConnectionString"].ConnectionString);
+            context = new ShopDbContext(ConfigurationManager.ConnectionStrings["PrimaryConnectionString"].ConnectionString);
         }
 
         public DbSet<Car> GetCars()

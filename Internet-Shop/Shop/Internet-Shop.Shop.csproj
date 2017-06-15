@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -25,6 +26,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -131,25 +133,25 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app\root\public\bootstrap.js" />
-    <Content Include="app\root\public\bootstrap.min.js" />
-    <None Include="app\root\public\jquery-1.10.2.intellisense.js" />
-    <Content Include="app\root\public\jquery-1.10.2.js" />
-    <Content Include="app\root\public\jquery-1.10.2.min.js" />
-    <None Include="app\root\public\jquery.validate-vsdoc.js" />
-    <Content Include="app\root\public\jquery.validate.js" />
-    <Content Include="app\root\public\jquery.validate.min.js" />
-    <Content Include="app\root\public\jquery.validate.unobtrusive.js" />
-    <Content Include="app\root\public\jquery.validate.unobtrusive.min.js" />
-    <Content Include="app\root\public\modernizr-2.6.2.js" />
-    <Content Include="app\root\public\respond.js" />
-    <Content Include="app\root\public\respond.min.js" />
-    <None Include="app\root\public\_references.js" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Site.css" />
+    <Content Include="ExternalScripts\bootstrap.js" />
+    <Content Include="ExternalScripts\bootstrap.min.js" />
+    <None Include="ExternalScripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="ExternalScripts\jquery-1.10.2.js" />
+    <Content Include="ExternalScripts\jquery-1.10.2.min.js" />
+    <None Include="ExternalScripts\jquery.validate-vsdoc.js" />
+    <Content Include="ExternalScripts\jquery.validate.js" />
+    <Content Include="ExternalScripts\jquery.validate.min.js" />
+    <Content Include="ExternalScripts\jquery.validate.unobtrusive.js" />
+    <Content Include="ExternalScripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="ExternalScripts\modernizr-2.6.2.js" />
+    <Content Include="ExternalScripts\respond.js" />
+    <Content Include="ExternalScripts\respond.min.js" />
+    <None Include="ExternalScripts\_references.js" />
+    <Content Include="ExternalStyles\bootstrap.css" />
+    <Content Include="ExternalStyles\bootstrap.min.css" />
+    <Content Include="ExternalStyles\Site.css" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\CreateShop.sql" />
+    <Content Include="DataAccess\CreateShop.sql" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -157,9 +159,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ShopController.cs" />
-    <Compile Include="DataAccess\IShopDBRepository.cs" />
-    <Compile Include="DataAccess\ShopDBContext.cs" />
-    <Compile Include="DataAccess\ShopDBRepository.cs" />
+    <Compile Include="DataAccess\IShopDbRepository.cs" />
+    <Compile Include="DataAccess\ShopDbContext.cs" />
+    <Compile Include="DataAccess\ShopDbRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -174,7 +176,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shop\Index.cshtml" />
-    <Content Include="app\root\public\jquery-1.10.2.min.map" />
+    <Content Include="ExternalScripts\jquery-1.10.2.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -184,12 +186,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\" />
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
   <ProjectExtensions>

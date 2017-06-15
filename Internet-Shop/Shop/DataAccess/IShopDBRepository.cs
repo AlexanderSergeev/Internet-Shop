@@ -3,7 +3,7 @@ using System.Data.Entity;
 
 namespace Shop.DataAccess
 {
-    interface IShopDBRepository
+    public interface IShopDbRepository
     {
         DbSet<Car> GetCars();
 

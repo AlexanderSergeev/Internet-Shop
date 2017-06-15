@@ -7,10 +7,10 @@ namespace Shop.Controllers
 {
     public class ShopController : Controller
     {
-        ShopDBRepository repo;
-        public ShopController()
+        IShopDbRepository repo;
+        public ShopController(IShopDbRepository repo2)
         {
-            repo = new ShopDBRepository();
+            repo = repo2;
         }
         public ActionResult Index()
         {

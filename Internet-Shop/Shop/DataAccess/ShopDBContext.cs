@@ -3,9 +3,9 @@ using System.Data.Entity;
 
 namespace Shop.DataAccess
 {
-    public class ShopDBContext : DbContext
+    public class ShopDbContext : DbContext
     {
-        public ShopDBContext(string connectionString)
+        public ShopDbContext(string connectionString)
         {
             Database.Connection.ConnectionString = connectionString;
         }
