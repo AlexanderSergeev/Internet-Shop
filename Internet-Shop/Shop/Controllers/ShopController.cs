@@ -15,7 +15,6 @@ namespace Shop.Controllers
         public ActionResult Index()
         {
             IEnumerable<Car> cars = repo.GetCars();
-            ViewBag.Cars = cars;
 
             return View();
         }

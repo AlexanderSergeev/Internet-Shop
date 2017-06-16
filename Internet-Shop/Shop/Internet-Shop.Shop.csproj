@@ -152,7 +152,6 @@
     <Content Include="ExternalStyles\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="DataAccess\CreateShop.sql" />
-    <Content Include="src\index.html" />
     <Content Include="src\styles.css" />
     <Content Include="src\systemjs.config.js" />
     <Content Include="Web.config" />
@@ -179,10 +178,10 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="src\tsconfig.json" />
-    <None Include="Views\Shop\Index.cshtml" />
     <Content Include="ExternalScripts\jquery-1.10.2.min.map" />
     <Content Include="packages.config" />
     <Content Include="package.json" />
+    <Content Include="Views\Shop\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

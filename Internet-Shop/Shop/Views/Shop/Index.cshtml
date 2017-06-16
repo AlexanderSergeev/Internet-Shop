@@ -1,26 +1,26 @@
 ﻿<!DOCTYPE html>
 
-<html lang="en">
-
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=7; IE=Edge">
-  <title>
-    Internet-shop
-  </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width" />
+  <title>Car Shop</title>
+  <base href="/src/">
+  <link rel="stylesheet" href="../../src/styles.css">
+
+  <script src="/node_modules/core-js/client/shim.min.js"></script>
+  <script src="/node_modules/zone.js/dist/zone.js"></script>
+  <script src="/node_modules/systemjs/dist/system.src.js"></script>
+
+  <script src="../../src/systemjs.config.js"></script>
+
+  <script>
+    System.import('main.js').catch(function (err) { console.error(err); });
+  </script>
 </head>
+
 <body>
-  <div style="overflow: auto; height: 270px;" id="chat">
-    <!-- foreach (Car c in ViewBag.Cars) -->
-
-    <p>
-      <b>Название:</b>
-    </p>
-    <p>
-      <b>Цена:</b> $
-    </p>
-
-  </div>
+  <br>
+  <my-app>Loading AppComponent content here ...</my-app>
 </body>
+
 </html>
