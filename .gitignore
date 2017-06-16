@@ -1,1 +1,5 @@
 *.suo
+obj/
+.vs/
+packages/
+bin/
