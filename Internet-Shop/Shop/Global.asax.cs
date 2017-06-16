@@ -13,6 +13,7 @@ namespace Shop
     {
         void Application_Start(object sender, EventArgs e)
         {
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(IocConfig.ConfigureContainer())); 
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
