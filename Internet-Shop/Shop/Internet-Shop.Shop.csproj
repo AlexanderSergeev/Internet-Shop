@@ -172,7 +172,7 @@
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\WishList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="App_Start\AutofacConfig.cs" />
+    <Compile Include="App_Start\IocConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
