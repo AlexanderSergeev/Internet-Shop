@@ -6,8 +6,8 @@ namespace Shop.DataAccess
     public class ShopDbContext : DbContext
     {
         public ShopDbContext(string connectionString)
+            : base(connectionString)
         {
-            Database.Connection.ConnectionString = connectionString;
         }
 
         public DbSet<Car> Cars { get; set; }

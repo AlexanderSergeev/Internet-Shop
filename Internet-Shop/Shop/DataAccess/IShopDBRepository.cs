@@ -1,11 +1,12 @@
-﻿using Shop.Models;
+﻿using System.Collections.Generic;
+using Shop.Models;
 using System.Data.Entity;
 
 namespace Shop.DataAccess
 {
     public interface IShopDbRepository
     {
-        DbSet<Car> GetCars();
+        IEnumerable<Car> GetCars();
 
         void AddCar(Car m);
     }

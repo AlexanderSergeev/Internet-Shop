@@ -1,6 +1,5 @@
-﻿using Shop.Models;
-using System.Configuration;
-using System.Data.Entity;
+﻿using System.Collections.Generic;
+using Shop.Models;
 
 namespace Shop.DataAccess
 {
@@ -8,12 +7,12 @@ namespace Shop.DataAccess
     {
         private readonly ShopDbContext context;
 
-        public ShopDbRepository()
+        public ShopDbRepository(ShopDbContext contextInstance)
         {
-            context = new ShopDbContext(ConfigurationManager.ConnectionStrings["PrimaryConnectionString"].ConnectionString);
+            context = contextInstance;
         }
 
-        public DbSet<Car> GetCars()
+        public IEnumerable<Car> GetCars()
         {
             return context.Cars;
         }

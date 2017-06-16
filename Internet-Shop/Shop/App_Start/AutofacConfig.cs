@@ -1,21 +1,23 @@
-﻿using Autofac;
+﻿using System.Configuration;
+using Autofac;
 using Autofac.Integration.Mvc;
-using Shop;
 using Shop.DataAccess;
-using System.Web.Mvc;
 
-public class AutofacConfig
+namespace Shop
 {
-    public static void ConfigureContainer()
+  public class IocConfig
+  {
+    public static IContainer ConfigureContainer()
     {
-        var builder = new ContainerBuilder();
+      var builder = new ContainerBuilder();
 
-        builder.RegisterControllers(typeof(Global).Assembly);
+      builder.RegisterControllers(typeof(Global).Assembly);
 
-        builder.RegisterType<ShopDbRepository>().As<IShopDbRepository>();
+      builder.RegisterType<ShopDbRepository>().As<IShopDbRepository>();
 
-        var container = builder.Build();
+      builder.RegisterType<ShopDbContext>().As<ShopDbContext>().WithParameter("connectionString", ConfigurationManager.ConnectionStrings["PrimaryConnectionString"].ConnectionString);
 
-        DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+      return builder.Build();
     }
+  }
 }

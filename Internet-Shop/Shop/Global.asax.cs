@@ -5,6 +5,7 @@ using System.Web.Routing;
 using System.Web.Http;
 using Chat;
 using System.Web.Optimization;
+using Autofac.Integration.Mvc;
 
 namespace Shop
 {
@@ -12,7 +13,6 @@ namespace Shop
     {
         void Application_Start(object sender, EventArgs e)
         {
-            AutofacConfig.ConfigureContainer();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
