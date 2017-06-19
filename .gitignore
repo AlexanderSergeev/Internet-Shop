@@ -1,5 +1,5 @@
 *.suo
-obj/
+Shop/obj/
 .vs/
 packages/
-bin/
+Shop/bin/

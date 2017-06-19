@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using Shop.Models;
-using System.Data.Entity;
 
 namespace Shop.DataAccess
 {
