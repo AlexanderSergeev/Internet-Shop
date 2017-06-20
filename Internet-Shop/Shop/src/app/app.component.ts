@@ -14,8 +14,8 @@ import { Car } from './car';
             </thead>
             <tbody>
                 <tr *ngFor="let car of cars">
-                    <td>{{car.name}}</td>
-                    <td>{{car.price}} $</td>
+                    <td>{{car.Name}}</td>
+                    <td>{{car.Price}} $</td>
                 </tr>
             </tbody>
         </table>
@@ -26,9 +26,10 @@ export class AppComponent implements OnInit {
 
   cars: Car[] = [];
 
-  constructor(private httpService: DataService) { }
+  constructor(private dataService: DataService) { }
   ngOnInit() {
-
-    this.httpService.getCars().subscribe((data) => this.cars = data);
+    this.dataService.getCars().subscribe(res => {
+      this.cars = res;
+    });
   }
 }

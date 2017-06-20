@@ -10,18 +10,10 @@ export class DataService {
 
   constructor(private http: Http) { }
 
-  getCars(): Observable<Car[]> {
-    return this.http.get('/api/cars')
-      .map((resp: Response) => {
-
-        let carsList = resp.json().data;
-
-        let cars: Car[] = [];
-        for (let index in carsList) {
-          let car = carsList[index];
-          cars.push({ id: car.id, name: car.name, price: car.price, vehiclePower: car.vehiclePower, maximumSpeed: car.maximumSpeed });
-        }
-        return cars;
-      });
+  getCars() {
+    return this.http
+      .get('/api/cars')
+      .map(res => res.json());
   }
+
 }

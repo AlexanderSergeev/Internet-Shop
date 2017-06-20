@@ -1,4 +1,4 @@
 ﻿export class Car {
 
-  constructor(public id: number, public name: string, public price: number, public vehiclePower: number, public maximumSpeed: number) { }
+  constructor(public Id: number, public Name: string, public Price: number, public VehiclePower: number, public MaximumSpeed: number) { }
 }

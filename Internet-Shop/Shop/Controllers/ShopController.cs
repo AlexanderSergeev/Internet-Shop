@@ -1,21 +1,16 @@
-﻿using Shop.DataAccess;
-using Shop.Models;
-using System.Collections.Generic;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 
 namespace Shop.Controllers
 {
     public class ShopController : Controller
     {
-        private IShopDbRepository repo;
-        public ShopController(IShopDbRepository repoInstance)
+
+        public ShopController()
         {
-            repo = repoInstance;
         }
+
         public ActionResult Index()
         {
-            IEnumerable<Car> cars = repo.GetCars();
-
             return View();
         }
     }

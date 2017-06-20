@@ -1,6 +1,4 @@
 ﻿using System.Configuration;
-using System.Reflection;
-using System.Web.Http;
 using Autofac;
 using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
@@ -10,18 +8,12 @@ namespace Shop
 {
   public class IocConfig
   {
-    public static void ConfigureContainer()
+    public static IContainer ConfigureContainer()
     {
-      var builder = new ContainerBuilder();
-
-      // Get your HttpConfiguration.
-      var config = GlobalConfiguration.Configuration;
       
-      // Register your Web API controllers.
+      var builder = new ContainerBuilder();
+      
       builder.RegisterApiControllers(typeof(Global).Assembly);
-
-      // OPTIONAL: Register the Autofac filter provider.
-      builder.RegisterWebApiFilterProvider(config);
 
       builder.RegisterControllers(typeof(Global).Assembly);
 
@@ -29,12 +21,7 @@ namespace Shop
 
       builder.RegisterType<ShopDbContext>().As<ShopDbContext>().WithParameter("connectionString", ConfigurationManager.ConnectionStrings["PrimaryConnectionString"].ConnectionString);
 
-      // Set the dependency resolver to be Autofac.
-      var container = builder.Build();
-
-      config.DependencyResolver = new AutofacWebApiDependencyResolver(container);
-
-      //return builder.Build();
+      return builder.Build();
     }
   }
 }

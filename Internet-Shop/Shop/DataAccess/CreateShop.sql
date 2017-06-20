@@ -10,7 +10,6 @@ go
 use Shop;
 go
 
---Таблица машин
 create table Cars (
 	Id int identity,    
 	Name text,			

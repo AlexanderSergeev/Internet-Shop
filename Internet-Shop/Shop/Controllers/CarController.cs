@@ -9,7 +9,8 @@ namespace Shop.Controllers
   [RoutePrefix("api/cars")]
   public class CarController : ApiController
   {
-    private readonly IShopDbRepository repository;
+    private IShopDbRepository repository;
+
     public CarController(IShopDbRepository repoInstance)
     {
       repository = repoInstance;
@@ -18,6 +19,9 @@ namespace Shop.Controllers
     [Route]
     public IEnumerable<Car> Get()
     {
+      Logger.InitLogger();
+      Logger.Log.Info("Hello info!");
+      Logger.Log.Error("Hello error!");
       return repository.GetCars();
     }
 
