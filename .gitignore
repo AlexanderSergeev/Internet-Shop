@@ -7,8 +7,6 @@ bin
 obj
 packages
 .vs
-Internet-Shop/.vs/Internet-Shop/v14/.suo
 *.dll
 *.cache
-Internet-Shop/Shop/obj/Debug/Internet-Shop.Shop.csproj.FileListAbsolute.txt
 *.pdb
