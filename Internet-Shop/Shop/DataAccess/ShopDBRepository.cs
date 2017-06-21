@@ -17,10 +17,14 @@ namespace Shop.DataAccess
             return context.Cars;
         }
 
-        public void AddCar(Car m)
+        public Car GetCar(string name)
         {
-            context.Cars.Add(m);
-            context.SaveChanges();
+            foreach (Car c in context.Cars)
+            {
+                if (c.Name == name)
+                    return c;
+            }
+            return null;
         }
     }
 }

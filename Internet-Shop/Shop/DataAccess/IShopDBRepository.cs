@@ -7,6 +7,6 @@ namespace Shop.DataAccess
     {
         IEnumerable<Car> GetCars();
 
-        void AddCar(Car m);
+        Car GetCar(string name);
     }
 }

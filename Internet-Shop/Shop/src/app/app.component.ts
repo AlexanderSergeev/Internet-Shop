@@ -3,8 +3,9 @@ import { DataService } from './data.service';
 import { Car } from './car';
 
 @Component({
-  selector: 'list-cars',
-  template: `<div class="panel">
+    selector: 'list-cars',
+
+    template: `<div class="panel">
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -14,22 +15,22 @@ import { Car } from './car';
             </thead>
             <tbody>
                 <tr *ngFor="let car of cars">
-                    <td>{{car.Name}}</td>
+                    <a [routerLink]="['/cars', car.Name]"><td>{{car.Name}}</td></a>
                     <td>{{car.Price}} $</td>
                 </tr>
             </tbody>
         </table>
     </div>`,
-  providers: [DataService]
+    providers: [DataService]
 })
 export class AppComponent implements OnInit {
 
-  cars: Car[] = [];
+    cars: Car[] = [];
 
-  constructor(private dataService: DataService) { }
-  ngOnInit() {
-    this.dataService.getCars().subscribe(res => {
-      this.cars = res;
-    });
-  }
+    constructor(private dataService: DataService) { }
+    ngOnInit() {
+        this.dataService.getCars().subscribe(res => {
+            this.cars = res;
+        });
+    }
 }

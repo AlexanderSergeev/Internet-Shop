@@ -168,15 +168,14 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\CarController.cs" />
     <Compile Include="Controllers\ShopController.cs" />
+    <Compile Include="Controllers\ShopApiController.cs" />
     <Compile Include="DataAccess\IShopDbRepository.cs" />
     <Compile Include="DataAccess\ShopDbContext.cs" />
     <Compile Include="DataAccess\ShopDbRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Logger\Logger.cs" />
     <Compile Include="Models\Car.cs" />
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Models\WishList.cs" />
@@ -192,6 +191,7 @@
     <Content Include="packages.config" />
     <Content Include="package.json" />
     <Content Include="Views\Shop\Index.cshtml" />
+    <None Include="Views\Shop\Car.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -208,11 +208,13 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="src\app\app.routes.ts" />
     <TypeScriptCompile Include="src\app\car.ts" />
     <TypeScriptCompile Include="src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\data.service.ts" />
+    <TypeScriptCompile Include="src\app\car.component.ts" />
     <TypeScriptCompile Include="src\main.ts" />
   </ItemGroup>
   <PropertyGroup>
