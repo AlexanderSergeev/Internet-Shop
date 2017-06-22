@@ -19,9 +19,12 @@ namespace Shop.DataAccess
 
         public Car GetCar(string name)
         {
+            string realName = name.Replace("{", "");
+            realName = realName.Replace("}", "");
+
             foreach (Car c in context.Cars)
             {
-                if (c.Name == name)
+                if (c.Name == realName)
                     return c;
             }
             return null;

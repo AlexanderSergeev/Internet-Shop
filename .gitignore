@@ -11,6 +11,5 @@ packages
 *.cache
 *.pdb
 Internet-Shop/.vs/Internet-Shop/v14/.suo
-*.dll
-*.cache
-*.pdb
+Internet-Shop/Shop/bin/Shop.dll.config
+Internet-Shop/Shop/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache

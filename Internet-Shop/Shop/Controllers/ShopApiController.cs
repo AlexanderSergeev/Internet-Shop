@@ -39,7 +39,8 @@ namespace Shop.Controllers
                 log.Error("Repository is null!");
                 return null;
             }
-            return repository.GetCar(name);
+            Car toReturn = repository.GetCar(name);
+            return toReturn;
         }
     }
 }

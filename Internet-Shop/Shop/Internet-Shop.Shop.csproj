@@ -160,8 +160,7 @@
     <Content Include="ExternalStyles\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="DataAccess\CreateShop.sql" />
-    <Content Include="src\styles.css" />
-    <Content Include="src\systemjs.config.js" />
+    <Content Include="systemjs.config.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -186,12 +185,11 @@
     <Content Include="Views\web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="src\tsconfig.json" />
+    <Content Include="tsconfig.json" />
     <Content Include="ExternalScripts\jquery-1.10.2.min.map" />
     <Content Include="packages.config" />
     <Content Include="package.json" />
     <Content Include="Views\Shop\Index.cshtml" />
-    <None Include="Views\Shop\Car.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -208,14 +206,13 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <TypeScriptCompile Include="src\app\app.routes.ts" />
-    <TypeScriptCompile Include="src\app\car.ts" />
-    <TypeScriptCompile Include="src\app\app.component.spec.ts" />
-    <TypeScriptCompile Include="src\app\app.component.ts" />
-    <TypeScriptCompile Include="src\app\app.module.ts" />
-    <TypeScriptCompile Include="src\app\data.service.ts" />
-    <TypeScriptCompile Include="src\app\car.component.ts" />
-    <TypeScriptCompile Include="src\main.ts" />
+    <TypeScriptCompile Include="app\app.routes.ts" />
+    <TypeScriptCompile Include="app\car.ts" />
+    <TypeScriptCompile Include="app\app.component.ts" />
+    <TypeScriptCompile Include="app\app.module.ts" />
+    <TypeScriptCompile Include="app\data.service.ts" />
+    <TypeScriptCompile Include="app\car.component.ts" />
+    <TypeScriptCompile Include="main.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

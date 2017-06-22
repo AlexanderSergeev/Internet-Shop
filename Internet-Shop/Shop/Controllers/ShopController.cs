@@ -9,11 +9,5 @@ namespace Shop.Controllers
         {
             return View();
         }
-
-        public ActionResult GetCar(string name)
-        {
-            ViewBag.Name = name;
-            return View("Car");
-        }
     }
 }

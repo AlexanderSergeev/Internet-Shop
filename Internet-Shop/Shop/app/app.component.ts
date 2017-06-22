@@ -4,23 +4,23 @@ import { Car } from './car';
 
 @Component({
     selector: 'list-cars',
-
     template: `<div class="panel">
         <table class="table table-striped">
             <thead>
                 <tr>
-                    <th>Name</th>
+                    <th>Name</th> 
                     <th>Price</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let car of cars">
-                    <a [routerLink]="['/cars', car.Name]"><td>{{car.Name}}</td></a>
+                    <td><a [routerLink]="['cars/',car.Name] ">{{car.Name}}</a></td>
                     <td>{{car.Price}} $</td>
                 </tr>
             </tbody>
         </table>
-    </div>`,
+    </div>
+<router-outlet></router-outlet>`,
     providers: [DataService]
 })
 export class AppComponent implements OnInit {
@@ -33,4 +33,5 @@ export class AppComponent implements OnInit {
             this.cars = res;
         });
     }
+
 }
