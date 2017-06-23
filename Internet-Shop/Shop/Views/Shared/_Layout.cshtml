@@ -19,17 +19,14 @@
                     <span class="icon-bar"></span>
                 </button>
                 @Html.ActionLink("Internet-Shop", "Index", "Shop", null, new { @class = "navbar-brand" })
+                @Html.ActionLink("Cart", "Cart", "Shop", null, new { @class = "navbar-brand" })
+                @Html.ActionLink("Wish List", "WishList", "Shop", null, new { @class = "navbar-brand" })
             </div>
         </div>
     </div>
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Chat App</p>
-        </footer>
     </div>
-
     @Scripts.Render("~/ExternalScripts/jquery")
     @Scripts.Render("~/ExternalScripts/bootstrap")
     @RenderSection("scripts", required: false)

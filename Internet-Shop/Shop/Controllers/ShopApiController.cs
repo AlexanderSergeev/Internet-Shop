@@ -19,7 +19,7 @@ namespace Shop.Controllers
         }
 
         [Route]
-        public IEnumerable<Car> Get()
+        public IEnumerable<Car> GetCars()
         {
             log.Info("Getting cars!");
             if (repository == null)
@@ -28,6 +28,30 @@ namespace Shop.Controllers
                 return null;
             }
             return repository.GetCars();
+        }
+
+        [Route("cart")]
+        public IEnumerable<Car> GetCart()
+        {
+            log.Info("Getting cart!");
+            if (repository == null)
+            {
+                log.Error("Repository is null!");
+                return null;
+            }
+            return repository.GetCart();
+        }
+
+        [Route("wishlist")]
+        public IEnumerable<Car> GetWishList()
+        {
+            log.Info("Getting wish list!");
+            if (repository == null)
+            {
+                log.Error("Repository is null!");
+                return null;
+            }
+            return repository.GetWishList();
         }
 
         [Route("{name}")]
@@ -39,8 +63,7 @@ namespace Shop.Controllers
                 log.Error("Repository is null!");
                 return null;
             }
-            Car toReturn = repository.GetCar(name);
-            return toReturn;
+            return repository.GetCar(name);
         }
     }
 }

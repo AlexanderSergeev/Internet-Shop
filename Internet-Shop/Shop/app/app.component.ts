@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { DataService } from './data.service';
-import { Car } from './car';
+﻿import { Component, OnInit } from '@angular/core';
+import { DataService } from './services/data.service';
+import { Car } from './models/car';
 
 @Component({
     selector: 'list-cars',
-    template: `<div class="panel">
+    template: `<router-outlet></router-outlet>
+    <div class="panel">
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -19,8 +20,7 @@ import { Car } from './car';
                 </tr>
             </tbody>
         </table>
-    </div>
-<router-outlet></router-outlet>`,
+    </div>`,
     providers: [DataService]
 })
 export class AppComponent implements OnInit {

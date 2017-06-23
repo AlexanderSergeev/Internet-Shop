@@ -9,5 +9,15 @@ namespace Shop.Controllers
         {
             return View();
         }
+
+        public ActionResult Cart()
+        {
+            return View("Cart");
+        }
+
+        public ActionResult WishList()
+        {
+            return View("WishList");
+        }
     }
 }

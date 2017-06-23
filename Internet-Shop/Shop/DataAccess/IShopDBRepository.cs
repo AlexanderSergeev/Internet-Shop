@@ -7,6 +7,10 @@ namespace Shop.DataAccess
     {
         IEnumerable<Car> GetCars();
 
+        IEnumerable<Car> GetCart();
+
+        IEnumerable<Car> GetWishList();
+
         Car GetCar(string name);
     }
 }

@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { CarComponent } from './car.component';
 import { appRouterModule } from "./app.routes";
-import { DataService } from "./data.service";
+import { DataService } from "./services/data.service";
 
 @NgModule({
     imports: [BrowserModule, HttpModule, appRouterModule],

@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var data_service_1 = require("./data.service");
+var data_service_1 = require("./services/data.service");
 var AppComponent = (function () {
     function AppComponent(dataService) {
         this.dataService = dataService;
@@ -27,7 +27,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'list-cars',
-        template: "<div class=\"panel\">\n        <table class=\"table table-striped\">\n            <thead>\n                <tr>\n                    <th>Name</th> \n                    <th>Price</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let car of cars\">\n                    <td><a [routerLink]=\"['cars/',car.Name] \">{{car.Name}}</a></td>\n                    <td>{{car.Price}} $</td>\n                </tr>\n            </tbody>\n        </table>\n    </div>\n<router-outlet></router-outlet>",
+        template: "<router-outlet></router-outlet>\n    <div class=\"panel\">\n        <table class=\"table table-striped\">\n            <thead>\n                <tr>\n                    <th>Name</th> \n                    <th>Price</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let car of cars\">\n                    <td><a [routerLink]=\"['cars/',car.Name] \">{{car.Name}}</a></td>\n                    <td>{{car.Price}} $</td>\n                </tr>\n            </tbody>\n        </table>\n    </div>",
         providers: [data_service_1.DataService]
     }),
     __metadata("design:paramtypes", [data_service_1.DataService])

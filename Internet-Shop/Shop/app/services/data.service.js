@@ -12,7 +12,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/map");
-require("rxjs/add/operator/catch");
 var DataService = (function () {
     function DataService(http) {
         this.http = http;
@@ -26,9 +25,18 @@ var DataService = (function () {
         return this.http
             .get('/api/cars/{' + name + '}')
             .map(function (res) {
-            console.log('res' + res);
             return res.json();
         });
+    };
+    DataService.prototype.getCart = function () {
+        return this.http
+            .get('/api/cars/cart')
+            .map(function (res) { return res.json(); });
+    };
+    DataService.prototype.getWishList = function () {
+        return this.http
+            .get('/api/cars/wishlist')
+            .map(function (res) { return res.json(); });
     };
     return DataService;
 }());

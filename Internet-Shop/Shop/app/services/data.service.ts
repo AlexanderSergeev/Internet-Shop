@@ -1,7 +1,6 @@
 ﻿import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
 
 @Injectable()
 export class DataService {
@@ -18,9 +17,20 @@ export class DataService {
         return this.http
             .get('/api/cars/{' + name + '}')
             .map(res => {
-                console.log('res' + res);
                 return res.json();
             });
+    }
+
+    getCart() {
+        return this.http
+            .get('/api/cars/cart')
+            .map(res => res.json());
+    }
+
+    getWishList() {
+        return this.http
+            .get('/api/cars/wishlist')
+            .map(res => res.json());
     }
 
 }

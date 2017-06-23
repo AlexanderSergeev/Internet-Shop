@@ -9,22 +9,20 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 var platform_browser_1 = require("@angular/platform-browser");
-var app_component_1 = require("./app.component");
-var car_component_1 = require("./car.component");
-var app_routes_1 = require("./app.routes");
+var wishlist_component_1 = require("./wishlist.component");
 var data_service_1 = require("./services/data.service");
-var AppModule = (function () {
-    function AppModule() {
+var WishListModule = (function () {
+    function WishListModule() {
     }
-    return AppModule;
+    return WishListModule;
 }());
-AppModule = __decorate([
+WishListModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, http_1.HttpModule, app_routes_1.appRouterModule],
-        declarations: [app_component_1.AppComponent, car_component_1.CarComponent],
-        bootstrap: [app_component_1.AppComponent],
+        imports: [platform_browser_1.BrowserModule, http_1.HttpModule],
+        declarations: [wishlist_component_1.WishListComponent],
+        bootstrap: [wishlist_component_1.WishListComponent],
         providers: [data_service_1.DataService]
     })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], WishListModule);
+exports.WishListModule = WishListModule;
+//# sourceMappingURL=wishlist.module.js.map
