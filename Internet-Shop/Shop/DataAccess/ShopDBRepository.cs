@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Shop.Models;
 
@@ -86,6 +85,28 @@ namespace Shop.DataAccess
                     return c;
             }
             return null;
+        }
+
+        public void AddToCart(CartElem model)
+        {
+            context.Cart.SqlQuery("select * from Cart where Cart.IdCartElem = " + model.IdCartElem)
+                context.Cart.Add(model);
+            context.SaveChanges();
+        }
+
+        public void AddToWishList(WishListElem model)
+        {
+            if (context.WishList.Find(model) == null)
+                context.WishList.Add(model);
+            context.SaveChanges();
+        }
+
+        public void DeleteFromCart(int index)
+        {
+            IList<CartElem> cart = context.Cart.ToList();
+            CartElem elem = cart[index];
+            context.Cart.Remove(elem);
+            context.SaveChanges();
         }
     }
 }

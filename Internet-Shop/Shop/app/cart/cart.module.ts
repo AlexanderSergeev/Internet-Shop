@@ -1,13 +1,13 @@
 ﻿import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { WishListComponent } from './wishlist.component';
-import { DataService } from "./services/data.service";
+import { CartComponent } from './cart.component';
+import { DataService } from "../shared/data.service";
 
 @NgModule({
     imports: [BrowserModule, HttpModule],
-    declarations: [WishListComponent],
-    bootstrap: [WishListComponent],
+    declarations: [CartComponent],
+    bootstrap: [CartComponent],
     providers: [DataService]
 })
-export class WishListModule { }
+export class CartModule { }

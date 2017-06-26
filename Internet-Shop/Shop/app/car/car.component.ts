@@ -1,6 +1,6 @@
 ﻿import { Component, OnInit, OnDestroy } from '@angular/core';
-import { DataService } from './services/data.service';
-import { Car } from './models/car';
+import { DataService } from '../shared/data.service';
+import { Car } from '../shared/car';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
@@ -11,8 +11,8 @@ import { ActivatedRoute, Router } from '@angular/router';
         <p>Price: {{car?.Price}}$</p>
         <p>VehiclePower: {{car?.VehiclePower}} PS</p> 
         <p>MaximumSpeed: {{car?.MaximumSpeed}} km/h</p> 
-        <a (click)="addToCart()" class="btn btn-info" role="button">Add to Cart</a>
-        <a (click)="addToWishList()" class="btn btn-success" role="button">Add to Wish List</a>
+        <a (click)="addToCart(car.Id)" class="btn btn-info" role="button">Add to Cart</a>
+        <a (click)="addToWishList(car.Id)" class="btn btn-success" role="button">Add to Wish List</a>
     </div><br>`,
     providers: [DataService]
 })
@@ -36,11 +36,11 @@ export class CarComponent implements OnInit, OnDestroy {
         this.sub.unsubscribe();
     }
 
-    addToCart() {
-        
+    addToCart(idCar: number) {
+        this.dataService.addToCart(idCar);
     }
 
-    addToWishList() {
-        
+    addToWishList(idCar: number) {
+        this.dataService.addToWishList(idCar);
     }
 }

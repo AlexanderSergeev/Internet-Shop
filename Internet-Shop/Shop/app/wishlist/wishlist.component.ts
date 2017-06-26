@@ -1,6 +1,6 @@
 ﻿import { Component, OnInit } from '@angular/core';
-import { DataService } from './services/data.service';
-import { Car } from './models/car';
+import { DataService } from '../shared/data.service';
+import { Car } from '../shared/car';
 
 @Component({
     selector: 'list-wish',
@@ -23,7 +23,7 @@ import { Car } from './models/car';
                     <td>{{car.VehiclePower}} PS</td>
                     <td>{{car.MaximumSpeed}} km/h</td>
                     <td>{{car.Price}} $</td>
-                    <td><a (click)="addToCart()" class="btn btn-success" role="button">Add to cart</a> <a (click)="cancel()" class="btn btn-info" role="button">Cancel</a></td>
+                    <td><a (click)="addToCart(car.Id)" class="btn btn-success" role="button">Add to cart</a> <a (click)="cancel()" class="btn btn-info" role="button">Cancel</a></td>
                 </tr>
             </tbody>
         </table>
@@ -45,8 +45,8 @@ export class WishListComponent implements OnInit {
 
     }
 
-    addToCart() {
-
+    addToCart(idCar: number) {
+        this.dataService.addToCart(idCar);
     }
 
 }

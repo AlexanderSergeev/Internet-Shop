@@ -10,7 +10,7 @@ var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 var platform_browser_1 = require("@angular/platform-browser");
 var cart_component_1 = require("./cart.component");
-var data_service_1 = require("./services/data.service");
+var data_service_1 = require("../shared/data.service");
 var CartModule = (function () {
     function CartModule() {
     }

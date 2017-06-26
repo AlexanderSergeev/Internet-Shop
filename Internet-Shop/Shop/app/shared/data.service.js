@@ -23,7 +23,7 @@ var DataService = (function () {
     };
     DataService.prototype.getCar = function (name) {
         return this.http
-            .get('/api/cars/{' + name + '}')
+            .get('/api/cars/' + name)
             .map(function (res) {
             return res.json();
         });
@@ -37,6 +37,29 @@ var DataService = (function () {
         return this.http
             .get('/api/cars/wishlist')
             .map(function (res) { return res.json(); });
+    };
+    DataService.prototype.addToCart = function (idCar) {
+        var xhr = new XMLHttpRequest();
+        var json = JSON.stringify({
+            IdCar: idCar
+        });
+        xhr.open('POST', '/api/cars/cart', true);
+        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+        xhr.send(json);
+    };
+    DataService.prototype.addToWishList = function (idCar) {
+        var xhr = new XMLHttpRequest();
+        var json = JSON.stringify({
+            IdCar: idCar
+        });
+        xhr.open('POST', '/api/cars/wishlist', true);
+        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+        xhr.send(json);
+    };
+    DataService.prototype.deleteFromCart = function (index) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('DELETE', '/api/cars/cart/' + index, true);
+        xhr.send();
     };
     return DataService;
 }());

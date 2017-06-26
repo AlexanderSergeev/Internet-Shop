@@ -1,182 +1,354 @@
-2017-06-23 12:02:30,382  INFO  Getting cars!
-2017-06-23 12:02:33,747  INFO  Getting car by name
-2017-06-23 12:08:06,543  INFO  Getting cars!
-2017-06-23 12:08:07,625  INFO  Getting car by name
-2017-06-23 12:08:13,572  INFO  Getting car by name
-2017-06-23 12:08:14,452  INFO  Getting car by name
-2017-06-23 12:09:08,697  INFO  Getting cars!
-2017-06-23 12:09:23,527  INFO  Getting car by name
-2017-06-23 12:12:12,798  INFO  Getting cars!
-2017-06-23 12:12:18,859  INFO  Getting car by name
-2017-06-23 12:13:50,243  INFO  Getting cars!
-2017-06-23 12:13:52,831  INFO  Getting car by name
-2017-06-23 12:14:00,560  INFO  Getting cars!
-2017-06-23 12:14:01,510  INFO  Getting car by name
-2017-06-23 12:14:02,113  INFO  Getting car by name
-2017-06-23 12:14:03,311  INFO  Getting car by name
-2017-06-23 12:16:12,468  INFO  Getting cars!
-2017-06-23 12:16:13,765  INFO  Getting car by name
-2017-06-23 12:19:55,533  INFO  Getting cars!
-2017-06-23 12:19:56,595  INFO  Getting car by name
-2017-06-23 12:21:14,299  INFO  Getting cars!
-2017-06-23 12:21:15,738  INFO  Getting car by name
-2017-06-23 12:22:01,785  INFO  Getting cars!
-2017-06-23 12:22:04,186  INFO  Getting car by name
-2017-06-23 12:22:05,534  INFO  Getting cars!
-2017-06-23 12:22:06,519  INFO  Getting car by name
-2017-06-23 12:22:41,756  INFO  Getting cars!
-2017-06-23 12:22:42,457  INFO  Getting car by name
-2017-06-23 12:23:01,054  INFO  Getting cars!
-2017-06-23 12:23:02,418  INFO  Getting car by name
-2017-06-23 12:23:04,095  INFO  Getting car by name
-2017-06-23 12:23:05,053  INFO  Getting car by name
-2017-06-23 12:23:05,723  INFO  Getting car by name
-2017-06-23 12:23:06,565  INFO  Getting car by name
-2017-06-23 12:23:41,358  INFO  Getting cars!
-2017-06-23 12:23:42,211  INFO  Getting car by name
-2017-06-23 12:23:45,526  INFO  Getting car by name
-2017-06-23 12:23:46,460  INFO  Getting car by name
-2017-06-23 12:23:48,564  INFO  Getting car by name
-2017-06-23 12:23:49,214  INFO  Getting car by name
-2017-06-23 12:24:57,615  INFO  Getting cars!
-2017-06-23 12:25:59,902  INFO  Getting cars!
-2017-06-23 12:26:01,162  INFO  Getting cars!
-2017-06-23 12:26:04,024  INFO  Getting car by name
-2017-06-23 12:26:04,989  INFO  Getting cars!
-2017-06-23 12:26:06,358  INFO  Getting car by name
-2017-06-23 12:26:08,388  INFO  Getting cars!
-2017-06-23 12:26:09,475  INFO  Getting car by name
-2017-06-23 12:26:26,814  INFO  Getting car by name
-2017-06-23 12:28:27,766  INFO  Getting cars!
-2017-06-23 12:28:34,056  INFO  Getting cars!
-2017-06-23 12:28:36,250  INFO  Getting cars!
-2017-06-23 12:28:40,028  INFO  Getting cars!
-2017-06-23 12:28:48,047  INFO  Getting cars!
-2017-06-23 12:28:49,192  INFO  Getting cars!
-2017-06-23 12:28:50,329  INFO  Getting cars!
-2017-06-23 12:28:51,200  INFO  Getting cars!
-2017-06-23 12:28:53,082  INFO  Getting cars!
-2017-06-23 12:28:54,848  INFO  Getting cars!
-2017-06-23 12:28:56,123  INFO  Getting car by name
-2017-06-23 12:37:57,536  INFO  Getting cars!
-2017-06-23 12:38:45,682  INFO  Getting cars!
-2017-06-23 12:38:50,001  INFO  Getting cars!
-2017-06-23 12:38:50,888  INFO  Getting car by name
-2017-06-23 12:39:05,823  INFO  Getting car by name
-2017-06-23 12:39:10,956  INFO  Getting cars!
-2017-06-23 12:39:16,504  INFO  Getting car by name
-2017-06-23 13:16:28,226  INFO  Getting cart!
-2017-06-23 13:22:43,547  INFO  Getting cart!
-2017-06-23 13:26:26,448  INFO  Getting cart!
-2017-06-23 13:26:43,260  INFO  Getting wish list!
-2017-06-23 13:43:59,859  INFO  Getting cars!
-2017-06-23 14:42:17,585  INFO  Getting cart!
-2017-06-23 14:52:23,681  INFO  Getting cart!
-2017-06-23 14:53:32,852  INFO  Getting cart!
-2017-06-23 14:54:11,286  INFO  Getting cart!
-2017-06-23 14:54:34,046  INFO  Getting cart!
-2017-06-23 14:55:55,788  INFO  Getting wish list!
-2017-06-23 14:56:21,368  INFO  Getting cart!
-2017-06-23 14:56:26,083  INFO  Getting car by name
-2017-06-23 14:56:32,254  INFO  Getting wish list!
-2017-06-23 14:57:37,002  INFO  Getting wish list!
-2017-06-23 14:57:44,507  INFO  Getting cart!
-2017-06-23 15:01:14,449  INFO  Getting cars!
-2017-06-23 15:01:25,254  INFO  Getting cars!
-2017-06-23 15:02:31,816  INFO  Getting cars!
-2017-06-23 15:04:19,893  INFO  Getting cars!
-2017-06-23 15:04:24,487  INFO  Getting cars!
-2017-06-23 15:04:28,741  INFO  Getting cars!
-2017-06-23 15:05:04,879  INFO  Getting cars!
-2017-06-23 15:05:14,682  INFO  Getting cars!
-2017-06-23 15:05:16,190  INFO  Getting car by name
-2017-06-23 15:05:29,712  INFO  Getting cars!
-2017-06-23 15:05:31,015  INFO  Getting cars!
-2017-06-23 15:06:32,880  INFO  Getting cart!
-2017-06-23 15:12:09,650  INFO  Getting cars!
-2017-06-23 15:28:56,015  INFO  Getting cars!
-2017-06-23 15:29:00,264  INFO  Getting cart!
-2017-06-23 15:29:02,107  INFO  Getting cars!
-2017-06-23 15:29:02,975  INFO  Getting cart!
-2017-06-23 15:29:03,849  INFO  Getting cars!
-2017-06-23 15:29:04,840  INFO  Getting cart!
-2017-06-23 15:29:06,540  INFO  Getting cars!
-2017-06-23 15:29:07,259  INFO  Getting cart!
-2017-06-23 15:29:08,677  INFO  Getting cars!
-2017-06-23 15:40:47,888  INFO  Getting cars!
-2017-06-23 15:40:54,149  INFO  Getting cart!
-2017-06-23 15:40:55,748  INFO  Getting cart!
-2017-06-23 15:40:57,755  INFO  Getting cart!
-2017-06-23 15:40:59,117  INFO  Getting cart!
-2017-06-23 15:41:01,219  INFO  Getting cart!
-2017-06-23 15:42:09,424  INFO  Getting cars!
-2017-06-23 15:42:11,421  INFO  Getting cars!
-2017-06-23 15:42:12,148  INFO  Getting cart!
-2017-06-23 15:42:13,285  INFO  Getting wish list!
-2017-06-23 15:42:14,392  INFO  Getting cart!
-2017-06-23 15:42:15,353  INFO  Getting wish list!
-2017-06-23 15:42:18,915  INFO  Getting cart!
-2017-06-23 15:42:19,850  INFO  Getting wish list!
-2017-06-23 15:42:22,383  INFO  Getting cart!
-2017-06-23 15:42:23,689  INFO  Getting wish list!
-2017-06-23 15:42:24,656  INFO  Getting car by name
-2017-06-23 15:45:27,431  INFO  Getting cars!
-2017-06-23 15:45:30,145  INFO  Getting cart!
-2017-06-23 15:45:33,227  INFO  Getting wish list!
-2017-06-23 15:45:34,483  INFO  Getting cart!
-2017-06-23 15:45:35,203  INFO  Getting cars!
-2017-06-23 15:45:36,212  INFO  Getting cart!
-2017-06-23 15:45:37,493  INFO  Getting wish list!
-2017-06-23 15:45:38,260  INFO  Getting cars!
-2017-06-23 15:47:32,263  INFO  Getting cars!
-2017-06-23 15:47:34,078  INFO  Getting cart!
-2017-06-23 15:47:35,787  INFO  Getting wish list!
-2017-06-23 15:47:36,825  INFO  Getting cars!
-2017-06-23 15:47:50,368  INFO  Getting cars!
-2017-06-23 15:47:51,782  INFO  Getting cart!
-2017-06-23 15:47:53,444  INFO  Getting wish list!
-2017-06-23 15:47:55,995  INFO  Getting cart!
-2017-06-23 15:47:57,498  INFO  Getting wish list!
-2017-06-23 15:47:57,908  INFO  Getting car by name
-2017-06-23 15:48:28,382  INFO  Getting cars!
-2017-06-23 15:48:30,518  INFO  Getting cart!
-2017-06-23 15:48:31,781  INFO  Getting wish list!
-2017-06-23 15:48:32,904  INFO  Getting car by name
-2017-06-23 15:48:37,516  INFO  Getting cart!
-2017-06-23 15:48:38,359  INFO  Getting cars!
-2017-06-23 15:48:39,192  INFO  Getting cart!
-2017-06-23 15:48:39,748  INFO  Getting wish list!
-2017-06-23 15:52:22,700  INFO  Getting cars!
-2017-06-23 15:52:26,828  INFO  Getting cart!
-2017-06-23 15:52:28,552  INFO  Getting wish list!
-2017-06-23 15:52:32,473  INFO  Getting cart!
-2017-06-23 15:52:33,072  INFO  Getting cars!
-2017-06-23 15:52:34,393  INFO  Getting cart!
-2017-06-23 15:52:35,424  INFO  Getting wish list!
-2017-06-23 15:52:36,730  INFO  Getting cart!
-2017-06-23 15:52:37,495  INFO  Getting cars!
-2017-06-23 15:52:38,702  INFO  Getting cart!
-2017-06-23 15:52:40,182  INFO  Getting wish list!
-2017-06-23 15:53:12,029  INFO  Getting cars!
-2017-06-23 15:53:13,725  INFO  Getting wish list!
-2017-06-23 15:53:15,466  INFO  Getting cart!
-2017-06-23 15:53:16,685  INFO  Getting wish list!
-2017-06-23 15:53:18,860  INFO  Getting cart!
-2017-06-23 15:53:19,700  INFO  Getting cars!
-2017-06-23 15:53:22,567  INFO  Getting car by name
-2017-06-23 15:53:24,697  INFO  Getting car by name
-2017-06-23 15:53:25,698  INFO  Getting car by name
-2017-06-23 15:53:27,134  INFO  Getting car by name
-2017-06-23 15:53:28,918  INFO  Getting cart!
-2017-06-23 15:53:30,089  INFO  Getting wish list!
-2017-06-23 15:53:31,875  INFO  Getting cart!
-2017-06-23 15:53:35,443  INFO  Getting cart!
-2017-06-23 15:53:37,115  INFO  Getting wish list!
-2017-06-23 15:53:38,946  INFO  Getting cars!
-2017-06-23 15:53:41,479  INFO  Getting wish list!
-2017-06-23 15:53:45,346  INFO  Getting cart!
-2017-06-23 15:53:45,977  INFO  Getting cars!
-2017-06-23 15:53:46,885  INFO  Getting cart!
-2017-06-23 15:53:48,153  INFO  Getting wish list!
-2017-06-23 15:53:49,465  INFO  Getting cart!
-2017-06-23 15:53:50,088  INFO  Getting cars!
+2017-06-26 12:14:24,483  INFO  Getting cars!
+2017-06-26 12:30:24,535  INFO  Getting cars!
+2017-06-26 12:30:28,867  INFO  Getting cart!
+2017-06-26 12:30:30,792  INFO  Getting wish list!
+2017-06-26 12:30:32,096  INFO  Getting cars!
+2017-06-26 13:03:11,972  INFO  Getting cars!
+2017-06-26 13:03:13,952  INFO  Getting cart!
+2017-06-26 13:03:15,291  INFO  Getting cars!
+2017-06-26 13:03:16,388  INFO  Getting car by name
+2017-06-26 13:03:21,185  INFO  Getting cart!
+2017-06-26 13:03:22,498  INFO  Getting cars!
+2017-06-26 13:03:23,477  INFO  Getting car by name
+2017-06-26 13:04:00,712  INFO  Getting cart!
+2017-06-26 13:05:08,638  INFO  Getting cars!
+2017-06-26 13:05:10,076  INFO  Getting car by name
+2017-06-26 13:08:00,192  INFO  Getting cars!
+2017-06-26 13:08:01,999  INFO  Getting car by name
+2017-06-26 13:08:14,086  INFO  Getting car by name
+2017-06-26 13:08:22,920  INFO  Getting car by name
+2017-06-26 13:09:34,688  INFO  Getting cart!
+2017-06-26 13:09:36,302  INFO  Getting cars!
+2017-06-26 13:10:30,071  INFO  Getting car by name
+2017-06-26 13:10:35,306  INFO  Getting cars!
+2017-06-26 13:10:39,883  INFO  Getting car by name
+2017-06-26 13:10:57,693  INFO  Getting car by name
+2017-06-26 13:11:15,687  INFO  Getting car by name
+2017-06-26 13:12:16,998  INFO  Getting cars!
+2017-06-26 13:12:18,873  INFO  Getting car by name
+2017-06-26 13:14:07,762  INFO  Getting cars!
+2017-06-26 13:14:09,521  INFO  Getting car by name
+2017-06-26 13:14:15,118  INFO  Getting car by name
+2017-06-26 13:14:18,762  INFO  Getting cart!
+2017-06-26 13:14:21,495  INFO  Getting cars!
+2017-06-26 13:14:34,932  INFO  Getting cars!
+2017-06-26 13:14:36,557  INFO  Getting cart!
+2017-06-26 13:14:38,333  INFO  Getting cars!
+2017-06-26 13:14:39,358  INFO  Getting car by name
+2017-06-26 13:14:42,764  INFO  Getting car by name
+2017-06-26 13:15:01,887  INFO  Getting cart!
+2017-06-26 13:15:03,842  INFO  Getting cars!
+2017-06-26 13:16:07,343  INFO  Getting cars!
+2017-06-26 13:16:08,144  INFO  Getting car by name
+2017-06-26 13:19:01,957  INFO  Getting cars!
+2017-06-26 13:19:03,327  INFO  Getting car by name
+2017-06-26 13:22:50,985  INFO  Getting cars!
+2017-06-26 13:22:52,391  INFO  Getting car by name
+2017-06-26 13:22:55,871  INFO  Getting car by name
+2017-06-26 13:25:34,574  INFO  Getting cars!
+2017-06-26 13:25:38,317  INFO  Getting car by name
+2017-06-26 13:25:39,430  INFO  Getting car by name
+2017-06-26 13:25:42,413  INFO  Getting cart!
+2017-06-26 13:25:43,802  INFO  Getting cars!
+2017-06-26 13:27:51,361  INFO  Getting cars!
+2017-06-26 13:27:52,517  INFO  Getting car by name
+2017-06-26 13:37:59,369  INFO  Getting cars!
+2017-06-26 13:38:00,974  INFO  Getting car by name
+2017-06-26 13:38:03,607  INFO  Getting cart!
+2017-06-26 13:38:04,527  INFO  Getting cars!
+2017-06-26 13:42:03,716  INFO  Getting cars!
+2017-06-26 13:42:04,766  INFO  Getting car by name
+2017-06-26 13:42:08,490  INFO  Getting cart!
+2017-06-26 13:42:24,141  INFO  Getting cars!
+2017-06-26 13:42:24,761  INFO  Getting car by name
+2017-06-26 13:42:26,605  INFO  Getting cart!
+2017-06-26 13:43:12,362  INFO  Getting cars!
+2017-06-26 13:43:17,503  INFO  Getting cars!
+2017-06-26 13:43:18,528  INFO  Getting car by name
+2017-06-26 13:43:21,582  INFO  Getting car by name
+2017-06-26 13:43:23,958  INFO  Getting cart!
+2017-06-26 13:44:11,216  INFO  Getting wish list!
+2017-06-26 13:47:34,874  INFO  Getting cart!
+2017-06-26 13:48:13,131  INFO  Getting cars!
+2017-06-26 13:48:14,235  INFO  Getting car by name
+2017-06-26 13:48:16,388  INFO  Getting cart!
+2017-06-26 13:48:16,909  INFO  Getting wish list!
+2017-06-26 13:48:18,926  INFO  Getting cart!
+2017-06-26 13:48:19,967  INFO  Getting wish list!
+2017-06-26 14:08:07,736  INFO  Getting cars!
+2017-06-26 14:08:22,334  INFO  Getting wish list!
+2017-06-26 14:08:23,379  INFO  Getting cart!
+2017-06-26 14:09:55,649  INFO  Getting cars!
+2017-06-26 14:09:57,342  INFO  Getting cart!
+2017-06-26 14:11:19,005  INFO  Getting cart!
+2017-06-26 14:12:28,792  INFO  Getting cars!
+2017-06-26 14:12:30,381  INFO  Getting cart!
+2017-06-26 14:15:17,130  INFO  Getting cars!
+2017-06-26 14:15:18,638  INFO  Getting cart!
+2017-06-26 14:29:16,750  INFO  Getting cars!
+2017-06-26 14:29:21,419  INFO  Getting cart!
+2017-06-26 14:31:53,348  INFO  Getting cars!
+2017-06-26 14:31:55,098  INFO  Getting cart!
+2017-06-26 14:35:49,288  INFO  Getting cars!
+2017-06-26 14:35:55,972  INFO  Getting cart!
+2017-06-26 14:37:14,687  INFO  Getting car by name
+2017-06-26 14:37:33,883  INFO  Getting cars!
+2017-06-26 14:37:35,612  INFO  Getting cart!
+2017-06-26 14:38:12,098  INFO  Getting cart!
+2017-06-26 14:49:55,310  INFO  Getting cars!
+2017-06-26 14:49:56,526  INFO  Getting cart!
+2017-06-26 14:50:32,165  INFO  Getting cars!
+2017-06-26 14:50:34,044  INFO  Getting cart!
+2017-06-26 14:51:05,948  INFO  Getting cars!
+2017-06-26 14:51:07,285  INFO  Getting cart!
+2017-06-26 14:51:32,837  INFO  Getting cars!
+2017-06-26 14:51:33,720  INFO  Getting car by name
+2017-06-26 14:51:35,137  INFO  Getting car by name
+2017-06-26 14:51:36,937  INFO  Getting car by name
+2017-06-26 14:51:38,888  INFO  Getting cart!
+2017-06-26 14:53:54,724  INFO  Getting cars!
+2017-06-26 14:53:57,793  INFO  Getting car by name
+2017-06-26 14:53:59,663  INFO  Getting cart!
+2017-06-26 14:54:12,786  INFO  Getting cart!
+2017-06-26 15:15:52,338  INFO  Getting cars!
+2017-06-26 15:15:53,708  INFO  Getting cart!
+2017-06-26 15:15:54,873  INFO  Getting cars!
+2017-06-26 15:15:55,492  INFO  Getting car by name
+2017-06-26 15:15:57,456  INFO  Getting cart!
+2017-06-26 15:16:09,648  INFO  Getting cart!
+2017-06-26 15:17:11,463  INFO  Getting cars!
+2017-06-26 15:17:13,326  INFO  Getting car by name
+2017-06-26 15:17:24,284  INFO  Getting cart!
+2017-06-26 15:19:24,540  INFO  Getting cars!
+2017-06-26 15:19:27,246  INFO  Getting cart!
+2017-06-26 15:19:28,598  INFO  Getting cart!
+2017-06-26 15:19:30,046  INFO  Getting cars!
+2017-06-26 15:19:30,799  INFO  Getting car by name
+2017-06-26 15:19:33,898  INFO  Getting car by name
+2017-06-26 15:19:36,723  INFO  Getting cart!
+2017-06-26 15:20:21,584  INFO  Getting cars!
+2017-06-26 15:20:23,830  INFO  Getting cars!
+2017-06-26 15:20:26,248  INFO  Getting cart!
+2017-06-26 15:20:28,057  INFO  Getting cart!
+2017-06-26 15:20:30,148  INFO  Getting cars!
+2017-06-26 15:20:30,742  INFO  Getting car by name
+2017-06-26 15:20:34,195  INFO  Getting cart!
+2017-06-26 15:20:35,317  INFO  Getting cart!
+2017-06-26 15:20:37,100  INFO  Getting cars!
+2017-06-26 15:20:37,925  INFO  Getting car by name
+2017-06-26 15:20:41,133  INFO  Getting car by name
+2017-06-26 15:20:43,709  INFO  Getting car by name
+2017-06-26 15:20:46,710  INFO  Getting cart!
+2017-06-26 15:20:47,887  INFO  Getting cart!
+2017-06-26 15:20:49,000  INFO  Getting cart!
+2017-06-26 15:20:50,217  INFO  Getting cart!
+2017-06-26 15:20:52,711  INFO  Getting cars!
+2017-06-26 15:20:55,475  INFO  Getting car by name
+2017-06-26 15:20:58,255  INFO  Getting car by name
+2017-06-26 15:21:01,446  INFO  Getting car by name
+2017-06-26 15:21:04,994  INFO  Getting cart!
+2017-06-26 15:21:05,993  INFO  Getting cart!
+2017-06-26 15:21:07,547  INFO  Getting cart!
+2017-06-26 15:21:15,996  INFO  Getting cart!
+2017-06-26 15:21:17,182  INFO  Getting cart!
+2017-06-26 15:21:19,896  INFO  Getting cars!
+2017-06-26 15:21:21,205  INFO  Getting car by name
+2017-06-26 15:21:23,900  INFO  Getting car by name
+2017-06-26 15:21:26,765  INFO  Getting cart!
+2017-06-26 15:21:27,693  INFO  Getting cart!
+2017-06-26 15:21:28,766  INFO  Getting cart!
+2017-06-26 15:21:30,621  INFO  Getting cars!
+2017-06-26 15:21:31,905  INFO  Getting car by name
+2017-06-26 15:21:34,875  INFO  Getting car by name
+2017-06-26 15:21:37,348  INFO  Getting car by name
+2017-06-26 15:21:40,271  INFO  Getting cart!
+2017-06-26 15:21:41,173  INFO  Getting cart!
+2017-06-26 15:21:42,104  INFO  Getting cart!
+2017-06-26 15:21:43,072  INFO  Getting cart!
+2017-06-26 15:21:45,229  INFO  Getting cars!
+2017-06-26 15:21:48,138  INFO  Getting car by name
+2017-06-26 15:22:04,506  INFO  Getting car by name
+2017-06-26 15:22:07,739  INFO  Getting cart!
+2017-06-26 15:22:11,298  INFO  Getting cars!
+2017-06-26 15:22:13,014  INFO  Getting car by name
+2017-06-26 15:22:16,430  INFO  Getting cart!
+2017-06-26 15:22:24,071  INFO  Getting cars!
+2017-06-26 15:22:24,945  INFO  Getting car by name
+2017-06-26 15:22:28,167  INFO  Getting cart!
+2017-06-26 15:22:30,941  INFO  Getting cart!
+2017-06-26 15:22:32,543  INFO  Getting cart!
+2017-06-26 15:22:34,311  INFO  Getting cart!
+2017-06-26 15:22:34,799  INFO  Getting cart!
+2017-06-26 15:22:39,142  INFO  Getting cars!
+2017-06-26 15:22:40,304  INFO  Getting car by name
+2017-06-26 15:22:43,353  INFO  Getting cart!
+2017-06-26 15:22:45,007  INFO  Getting cart!
+2017-06-26 15:22:45,744  INFO  Getting cart!
+2017-06-26 15:22:48,529  INFO  Getting cart!
+2017-06-26 15:22:50,760  INFO  Getting cars!
+2017-06-26 15:22:51,752  INFO  Getting car by name
+2017-06-26 15:22:54,726  INFO  Getting car by name
+2017-06-26 15:22:58,165  INFO  Getting cart!
+2017-06-26 15:22:59,328  INFO  Getting cart!
+2017-06-26 15:23:00,289  INFO  Getting cart!
+2017-06-26 15:23:02,177  INFO  Getting cars!
+2017-06-26 15:23:03,357  INFO  Getting car by name
+2017-06-26 15:23:06,318  INFO  Getting car by name
+2017-06-26 15:23:09,381  INFO  Getting cart!
+2017-06-26 15:23:11,737  INFO  Getting cart!
+2017-06-26 15:23:19,058  INFO  Getting cart!
+2017-06-26 15:23:22,131  INFO  Getting cars!
+2017-06-26 15:23:37,536  INFO  Getting car by name
+2017-06-26 15:23:43,858  INFO  Getting cart!
+2017-06-26 15:23:45,106  INFO  Getting cart!
+2017-06-26 15:23:46,084  INFO  Getting cart!
+2017-06-26 15:23:47,827  INFO  Getting cart!
+2017-06-26 15:23:51,067  INFO  Getting cart!
+2017-06-26 15:23:55,812  INFO  Getting cars!
+2017-06-26 15:23:56,603  INFO  Getting car by name
+2017-06-26 15:23:59,385  INFO  Getting car by name
+2017-06-26 15:24:02,443  INFO  Getting cart!
+2017-06-26 15:24:04,075  INFO  Getting cart!
+2017-06-26 15:24:13,837  INFO  Getting cart!
+2017-06-26 15:24:17,128  INFO  Getting cars!
+2017-06-26 15:24:20,204  INFO  Getting car by name
+2017-06-26 15:24:22,793  INFO  Getting car by name
+2017-06-26 15:24:25,683  INFO  Getting cart!
+2017-06-26 15:24:27,100  INFO  Getting cart!
+2017-06-26 15:24:28,709  INFO  Getting cart!
+2017-06-26 15:24:30,405  INFO  Getting cars!
+2017-06-26 15:24:31,539  INFO  Getting car by name
+2017-06-26 15:24:34,122  INFO  Getting car by name
+2017-06-26 15:24:37,479  INFO  Getting cart!
+2017-06-26 15:24:39,125  INFO  Getting cart!
+2017-06-26 15:27:08,047  INFO  Getting wish list!
+2017-06-26 15:27:12,048  INFO  Getting cart!
+2017-06-26 15:27:13,634  INFO  Getting cart!
+2017-06-26 15:27:15,456  INFO  Getting wish list!
+2017-06-26 15:27:18,887  INFO  Getting cart!
+2017-06-26 15:27:21,142  INFO  Getting wish list!
+2017-06-26 15:27:24,327  INFO  Getting cars!
+2017-06-26 15:27:26,239  INFO  Getting car by name
+2017-06-26 15:27:30,710  INFO  Getting cart!
+2017-06-26 15:27:32,339  INFO  Getting cart!
+2017-06-26 15:27:33,461  INFO  Getting cart!
+2017-06-26 15:27:35,255  INFO  Getting cars!
+2017-06-26 15:27:36,711  INFO  Getting car by name
+2017-06-26 15:27:40,579  INFO  Getting car by name
+2017-06-26 15:27:43,113  INFO  Getting car by name
+2017-06-26 15:27:47,228  INFO  Getting cart!
+2017-06-26 15:27:52,355  INFO  Getting cart!
+2017-06-26 15:27:59,164  INFO  Getting cart!
+2017-06-26 15:28:04,533  INFO  Getting cart!
+2017-06-26 15:28:12,722  INFO  Getting cars!
+2017-06-26 15:28:13,748  INFO  Getting cart!
+2017-06-26 15:28:14,532  INFO  Getting cart!
+2017-06-26 15:28:16,335  INFO  Getting cars!
+2017-06-26 15:28:18,347  INFO  Getting car by name
+2017-06-26 15:28:22,115  INFO  Getting cart!
+2017-06-26 15:28:22,669  INFO  Getting cart!
+2017-06-26 15:28:24,452  INFO  Getting cars!
+2017-06-26 15:28:26,258  INFO  Getting car by name
+2017-06-26 15:28:28,834  INFO  Getting car by name
+2017-06-26 15:28:31,313  INFO  Getting car by name
+2017-06-26 15:28:34,342  INFO  Getting cart!
+2017-06-26 15:28:37,045  INFO  Getting cart!
+2017-06-26 15:28:43,903  INFO  Getting cart!
+2017-06-26 15:28:49,254  INFO  Getting cart!
+2017-06-26 15:28:53,360  INFO  Getting cart!
+2017-06-26 15:28:54,734  INFO  Getting cart!
+2017-06-26 15:28:57,713  INFO  Getting cars!
+2017-06-26 15:29:27,055  INFO  Getting cart!
+2017-06-26 15:29:29,036  INFO  Getting cars!
+2017-06-26 15:29:31,026  INFO  Getting car by name
+2017-06-26 15:29:37,429  INFO  Getting cart!
+2017-06-26 15:29:38,911  INFO  Getting cart!
+2017-06-26 15:29:42,046  INFO  Getting cart!
+2017-06-26 15:30:20,433  INFO  Getting cart!
+2017-06-26 15:30:23,792  INFO  Getting cars!
+2017-06-26 15:30:26,242  INFO  Getting cart!
+2017-06-26 15:30:27,526  INFO  Getting cars!
+2017-06-26 15:30:28,521  INFO  Getting car by name
+2017-06-26 15:30:32,331  INFO  Getting car by name
+2017-06-26 15:30:34,728  INFO  Getting car by name
+2017-06-26 15:30:47,098  INFO  Getting cart!
+2017-06-26 15:30:51,563  INFO  Getting cart!
+2017-06-26 15:31:02,707  INFO  Getting cart!
+2017-06-26 15:31:08,020  INFO  Getting cart!
+2017-06-26 15:31:19,139  INFO  Getting cart!
+2017-06-26 15:33:15,805  INFO  Getting wish list!
+2017-06-26 15:33:18,061  INFO  Getting cart!
+2017-06-26 15:36:12,723  INFO  Getting cars!
+2017-06-26 15:36:14,455  INFO  Getting cart!
+2017-06-26 15:36:17,166  INFO  Getting cars!
+2017-06-26 15:36:18,249  INFO  Getting car by name
+2017-06-26 15:36:23,092  INFO  Getting cart!
+2017-06-26 15:36:25,565  INFO  Getting cars!
+2017-06-26 15:36:26,408  INFO  Getting car by name
+2017-06-26 15:36:30,588  INFO  Getting cart!
+2017-06-26 15:36:39,680  INFO  Getting cart!
+2017-06-26 15:36:41,106  INFO  Getting cart!
+2017-06-26 15:36:44,873  INFO  Getting cart!
+2017-06-26 15:36:45,858  INFO  Getting cart!
+2017-06-26 15:36:48,990  INFO  Getting cart!
+2017-06-26 15:37:33,621  INFO  Getting cars!
+2017-06-26 15:39:37,544  INFO  Getting cart!
+2017-06-26 15:39:39,951  INFO  Getting cars!
+2017-06-26 15:39:41,893  INFO  Getting car by name
+2017-06-26 15:39:45,556  INFO  Getting cart!
+2017-06-26 15:39:49,425  INFO  Getting cars!
+2017-06-26 15:39:50,670  INFO  Getting cart!
+2017-06-26 15:39:52,574  INFO  Getting cars!
+2017-06-26 15:39:53,286  INFO  Getting car by name
+2017-06-26 15:39:57,172  INFO  Getting cart!
+2017-06-26 15:40:26,633  INFO  Getting cars!
+2017-06-26 15:40:27,990  INFO  Getting cart!
+2017-06-26 15:40:29,395  INFO  Getting cars!
+2017-06-26 15:40:29,927  INFO  Getting car by name
+2017-06-26 15:40:33,242  INFO  Getting cart!
+2017-06-26 15:40:35,276  INFO  Getting cars!
+2017-06-26 15:43:15,905  INFO  Getting cars!
+2017-06-26 15:43:17,044  INFO  Getting cart!
+2017-06-26 15:43:18,863  INFO  Getting cars!
+2017-06-26 15:43:19,662  INFO  Getting car by name
+2017-06-26 15:43:23,686  INFO  Getting cart!
+2017-06-26 15:43:29,404  INFO  Getting cars!
+2017-06-26 15:43:30,886  INFO  Getting car by name
+2017-06-26 15:43:34,364  INFO  Getting cart!
+2017-06-26 15:43:35,955  INFO  Getting cars!
+2017-06-26 15:46:08,907  INFO  Getting cars!
+2017-06-26 15:46:10,271  INFO  Getting car by name
+2017-06-26 15:46:13,769  INFO  Getting car by name
+2017-06-26 15:46:17,774  INFO  Getting wish list!
+2017-06-26 15:46:20,081  INFO  Getting cars!
+2017-06-26 15:46:26,007  INFO  Getting car by name
+2017-06-26 15:46:54,005  INFO  Getting car by name
+2017-06-26 15:47:00,849  INFO  Getting cars!
+2017-06-26 15:47:10,952  INFO  Getting car by name
+2017-06-26 15:47:25,021  INFO  Getting car by name
+2017-06-26 15:47:31,767  INFO  Getting wish list!
+2017-06-26 15:47:34,129  INFO  Getting cars!
+2017-06-26 15:47:35,916  INFO  Getting car by name
+2017-06-26 15:47:39,171  INFO  Getting wish list!
+2017-06-26 15:47:43,195  INFO  Getting cart!
+2017-06-26 15:47:45,079  INFO  Getting cars!
+2017-06-26 15:47:45,761  INFO  Getting car by name
+2017-06-26 15:47:49,362  INFO  Getting cart!
+2017-06-26 15:47:51,852  INFO  Getting cars!
+2017-06-26 16:10:47,764  INFO  Getting cars!
+2017-06-26 16:10:49,704  INFO  Getting cart!
+2017-06-26 16:10:54,657  INFO  Getting cars!
+2017-06-26 16:14:15,417  INFO  Getting cart!
+2017-06-26 16:14:18,549  INFO  Getting cars!
+2017-06-26 16:15:42,834  INFO  Getting cart!
+2017-06-26 16:15:45,025  INFO  Getting cars!
+2017-06-26 16:15:45,900  INFO  Getting cart!
+2017-06-26 16:15:47,220  INFO  Getting cars!
+2017-06-26 16:15:48,138  INFO  Getting cart!
+2017-06-26 16:15:52,641  INFO  Getting cart!
+2017-06-26 16:15:54,287  INFO  Getting cars!
+2017-06-26 16:19:58,186  INFO  Getting cars!
+2017-06-26 16:20:05,262  INFO  Getting cart!
+2017-06-26 16:20:07,702  INFO  Getting wish list!
+2017-06-26 16:20:13,025  INFO  Getting cars!
+2017-06-26 16:21:56,451  INFO  Getting car by name

@@ -1,5 +1,5 @@
 ﻿import { Routes, RouterModule } from '@angular/router';
-import { CarComponent } from './car.component';
+import { CarComponent } from './car/car.component';
 
 const routes: Routes = [
     {

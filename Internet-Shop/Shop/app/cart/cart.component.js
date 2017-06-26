@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var data_service_1 = require("./services/data.service");
+var data_service_1 = require("../shared/data.service");
 var CartComponent = (function () {
     function CartComponent(dataService) {
         this.dataService = dataService;
@@ -20,16 +20,22 @@ var CartComponent = (function () {
         var _this = this;
         this.dataService.getCart().subscribe(function (res) {
             _this.cart = res;
+            console.log(_this.cart.length);
         });
     };
-    CartComponent.prototype.cancel = function () {
+    CartComponent.prototype.cancel = function (index) {
+        var _this = this;
+        this.dataService.deleteFromCart(index);
+        this.dataService.getCart().subscribe(function (res) {
+            _this.cart = res;
+        });
     };
     return CartComponent;
 }());
 CartComponent = __decorate([
     core_1.Component({
         selector: 'list-cart',
-        template: "\n    <div class=\"panel\">\n        <table class=\"table table-striped\">\n            <thead>\n                <tr>\n                    <th>\u2116</th> \n                    <th>Name</th> \n                    <th>VehiclePower</th>\n                    <th>MaximumSpeed</th>\n                    <th>Price</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let car of cart; let i = index\">\n                    <td>{{i+1}}</td>\n                    <td>{{car.Name}}</td>\n                    <td>{{car.VehiclePower}} PS</td>\n                    <td>{{car.MaximumSpeed}} km/h</td>\n                    <td>{{car.Price}} $</td>\n                    <td><a (click)=\"cancel()\" class=\"btn btn-info\" role=\"button\">Cancel</a></td>\n                </tr>\n            </tbody>\n        </table>\n    </div>",
+        template: "\n    <div class=\"panel\">\n        <table class=\"table table-striped\">\n            <thead>\n                <tr>\n                    <th>\u2116</th> \n                    <th>Name</th> \n                    <th>VehiclePower</th>\n                    <th>MaximumSpeed</th>\n                    <th>Price</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let car of cart; let i = index\">\n                    <td>{{i+1}}</td>\n                    <td>{{car.Name}}</td>\n                    <td>{{car.VehiclePower}} PS</td>\n                    <td>{{car.MaximumSpeed}} km/h</td>\n                    <td>{{car.Price}} $</td>\n                    <td><a (click)=\"cancel(i)\" class=\"btn btn-info\" role=\"button\">Cancel</a></td>\n                </tr>\n            </tbody>\n        </table>\n    </div>",
         providers: [data_service_1.DataService]
     }),
     __metadata("design:paramtypes", [data_service_1.DataService])

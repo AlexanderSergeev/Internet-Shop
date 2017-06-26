@@ -208,18 +208,18 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\app.routes.ts" />
-    <TypeScriptCompile Include="app\cart.component.ts" />
-    <TypeScriptCompile Include="app\wishlist.component.ts" />
-    <TypeScriptCompile Include="app\wishlist.module.ts" />
-    <TypeScriptCompile Include="cart.import.ts" />
-    <TypeScriptCompile Include="app\cart.module.ts" />
-    <TypeScriptCompile Include="app\models\car.ts" />
+    <TypeScriptCompile Include="app\cart\cart.component.ts" />
+    <TypeScriptCompile Include="app\wishlist\wishlist.component.ts" />
+    <TypeScriptCompile Include="app\wishlist\wishlist.module.ts" />
+    <TypeScriptCompile Include="app\cart\cart.import.ts" />
+    <TypeScriptCompile Include="app\cart\cart.module.ts" />
+    <TypeScriptCompile Include="app\shared\car.ts" />
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
-    <TypeScriptCompile Include="app\services\data.service.ts" />
-    <TypeScriptCompile Include="app\car.component.ts" />
-    <TypeScriptCompile Include="app.import.ts" />
-    <TypeScriptCompile Include="wishlist.import.ts" />
+    <TypeScriptCompile Include="app\shared\data.service.ts" />
+    <TypeScriptCompile Include="app\car\car.component.ts" />
+    <TypeScriptCompile Include="app\main.ts" />
+    <TypeScriptCompile Include="app\wishlist\wishlist.import.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

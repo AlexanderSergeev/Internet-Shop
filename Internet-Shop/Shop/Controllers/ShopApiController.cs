@@ -65,5 +65,27 @@ namespace Shop.Controllers
             }
             return repository.GetCar(name);
         }
+
+        [Route("cart")]
+        [HttpPost]
+        public void AddToCart([FromBody]CartElem model)
+        {
+            repository.AddToCart(model);
+        }
+
+        [Route("wishlist")]
+        [HttpPost]
+        public void AddToWishList([FromBody]WishListElem model)
+        {
+            repository.AddToWishList(model);
+        }
+
+        [Route("cart/{index}")]
+        [HttpGet]
+        [HttpDelete]
+        public void DeleteFromCart(int index)
+        {
+            repository.DeleteFromCart(index);
+        }
     }
 }

@@ -12,5 +12,11 @@ namespace Shop.DataAccess
         IEnumerable<Car> GetWishList();
 
         Car GetCar(string name);
+
+        void AddToCart(CartElem model);
+
+        void AddToWishList(WishListElem model);
+
+        void DeleteFromCart(int index);
     }
 }
