@@ -109,6 +109,6 @@ C:\Users\asergeev\Documents\Visual Studio 2015\Projects\Internet-Shop\Internet-S
 C:\Users\asergeev\Documents\Visual Studio 2015\Projects\Internet-Shop\Internet-Shop\Shop\bin\System.Net.Http.Formatting.xml
 C:\Users\asergeev\Documents\Visual Studio 2015\Projects\Internet-Shop\Internet-Shop\Shop\bin\System.Web.Http.xml
 C:\Users\asergeev\Documents\Visual Studio 2015\Projects\Internet-Shop\Internet-Shop\Shop\bin\System.Web.Http.WebHost.xml
-C:\Users\asergeev\Documents\Visual Studio 2015\Projects\Internet-Shop\Internet-Shop\Shop\obj\Debug\Internet-Shop.Shop.csprojResolveAssemblyReference.cache
 C:\Users\asergeev\Documents\Visual Studio 2015\Projects\Internet-Shop\Internet-Shop\Shop\bin\log4net.dll
 C:\Users\asergeev\Documents\Visual Studio 2015\Projects\Internet-Shop\Internet-Shop\Shop\bin\log4net.xml
+C:\Users\asergeev\Documents\Visual Studio 2015\Projects\Internet-Shop\Internet-Shop\Shop\obj\Debug\Internet-Shop.Shop.csprojResolveAssemblyReference.cache
