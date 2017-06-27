@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using Shop.Models;
 
@@ -20,92 +22,62 @@ namespace Shop.DataAccess
 
         public IEnumerable<Car> GetCart()
         {
-            List<Car> res = new List<Car>();
-            IList<CartElem> cart;
-            IList<Car> cars;
 
-            using (context)
-            {
-
-                cart = context.Cart.ToList();
-                cars = context.Cars.ToList();
-            }
-
-
-            foreach (Car c in cars)
-            {
-                foreach (CartElem elem in cart)
-                {
-                    if (c.Id == elem.IdCar)
-                    {
-                        res.Add(c);
-                        break;
-                    }
-                }
-            }
+            IEnumerable<Car> res = context.Database.SqlQuery<Car>("getCart");
             return res;
         }
 
         public IEnumerable<Car> GetWishList()
         {
-            List<Car> res = new List<Car>();
-            IList<WishListElem> wishList;
-            IList<Car> cars;
-
-            using (context)
-            {
-
-                wishList = context.WishList.ToList();
-                cars = context.Cars.ToList();
-            }
-
-
-            foreach (Car c in cars)
-            {
-                foreach (WishListElem elem in wishList)
-                {
-                    if (c.Id == elem.IdCar)
-                    {
-                        res.Add(c);
-                        break;
-                    }
-                }
-            }
+            IEnumerable<Car> res = context.Database.SqlQuery<Car>("getWishList");
             return res;
         }
 
-        public Car GetCar(string name)
+        public Car GetCar(int id)
         {
-            string realName = name.Replace("{", "");
-            realName = realName.Replace("}", "");
-
             foreach (Car c in context.Cars)
             {
-                if (c.Name == realName)
+                if (c.Id == id)
                     return c;
             }
             return null;
         }
 
-        public void AddToCart(CartElem model)
+        public void AddToCart(CartElement model)
         {
-            context.Cart.SqlQuery("select * from Cart where Cart.IdCartElem = " + model.IdCartElem)
-                context.Cart.Add(model);
+            context.Cart.Add(model);
             context.SaveChanges();
         }
 
-        public void AddToWishList(WishListElem model)
+        public void AddToWishList(WishListElement model)
         {
-            if (context.WishList.Find(model) == null)
-                context.WishList.Add(model);
+            context.WishList.Add(model);
             context.SaveChanges();
         }
 
-        public void DeleteFromCart(int index)
+        public void DeleteFromCart(int carId)
         {
-            IList<CartElem> cart = context.Cart.ToList();
-            CartElem elem = cart[index];
-            context.Cart.Remove(elem);
+            foreach (CartElement elem in context.Cart)
+            {
+                if (elem.CarId == carId)
+                {
+                    context.Cart.Remove(elem);
+                    break;
+                }
+            }
+            context.SaveChanges();
+        }
+
+        public void DeleteFromWishList(int carId)
+        {
+            foreach (WishListElement elem in context.WishList)
+            {
+                if (elem.CarId == carId)
+                {
+                    context.WishList.Remove(elem);
+                    break;
+                }
+            }
             context.SaveChanges();
         }
     }

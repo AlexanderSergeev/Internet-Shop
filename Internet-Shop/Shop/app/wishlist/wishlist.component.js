@@ -10,32 +10,38 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var data_service_1 = require("../shared/data.service");
+var cart_service_1 = require("../shared/cart.service");
+var wishlist_service_1 = require("../shared/wishlist.service");
 var WishListComponent = (function () {
-    function WishListComponent(dataService) {
-        this.dataService = dataService;
+    function WishListComponent(wishListService, cartService) {
+        this.wishListService = wishListService;
+        this.cartService = cartService;
         this.wishList = [];
     }
     WishListComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.dataService.getWishList().subscribe(function (res) {
+        this.wishListService.getWishList().subscribe(function (res) {
             _this.wishList = res;
         });
     };
-    WishListComponent.prototype.cancel = function () {
+    WishListComponent.prototype.remove = function (carId) {
+        if (this.wishListService.deleteFromWishList(carId)) {
+            var index = this.wishList.findIndex(function (car) { return car.Id === carId; });
+            this.wishList.splice(index, 1);
+        }
     };
     WishListComponent.prototype.addToCart = function (idCar) {
-        this.dataService.addToCart(idCar);
+        this.cartService.addToCart(idCar);
     };
     return WishListComponent;
 }());
 WishListComponent = __decorate([
     core_1.Component({
         selector: 'list-wish',
-        template: "\n    <div class=\"panel\">\n        <table class=\"table table-striped\">\n            <thead>\n                <tr>\n                    <th>\u2116</th> \n                    <th>Name</th> \n                    <th>VehiclePower</th>\n                    <th>MaximumSpeed</th>\n                    <th>Price</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let car of wishList; let i = index\">\n                    <td>{{i+1}}</td>\n                    <td>{{car.Name}}</td>\n                    <td>{{car.VehiclePower}} PS</td>\n                    <td>{{car.MaximumSpeed}} km/h</td>\n                    <td>{{car.Price}} $</td>\n                    <td><a (click)=\"addToCart(car.Id)\" class=\"btn btn-success\" role=\"button\">Add to cart</a> <a (click)=\"cancel()\" class=\"btn btn-info\" role=\"button\">Cancel</a></td>\n                </tr>\n            </tbody>\n        </table>\n    </div>",
-        providers: [data_service_1.DataService]
+        template: "\n    <div class=\"panel\">\n        <table class=\"table table-striped\">\n            <thead>\n                <tr>\n                    <th>\u2116</th> \n                    <th>Name</th> \n                    <th>VehiclePower</th>\n                    <th>MaximumSpeed</th>\n                    <th>Price</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let car of wishList; let i = index\">\n                    <td>{{i+1}}</td>\n                    <td>{{car.Name}}</td>\n                    <td>{{car.VehiclePower}} PS</td>\n                    <td>{{car.MaximumSpeed}} km/h</td>\n                    <td>{{car.Price}} $</td>\n                    <td><a (click)=\"addToCart(car.Id)\" class=\"btn btn-success\" role=\"button\">Add to cart</a>\n                        <a (click)=\"remove(car.Id)\" class=\"btn btn-info\" role=\"button\">Remove</a></td>\n                </tr>\n            </tbody>\n        </table>\n    </div>",
+        providers: [cart_service_1.CartService, wishlist_service_1.WishListService]
     }),
-    __metadata("design:paramtypes", [data_service_1.DataService])
+    __metadata("design:paramtypes", [wishlist_service_1.WishListService, cart_service_1.CartService])
 ], WishListComponent);
 exports.WishListComponent = WishListComponent;
 //# sourceMappingURL=wishlist.component.js.map

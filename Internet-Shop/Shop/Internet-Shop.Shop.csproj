@@ -141,6 +141,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DataAccess\SqlScripts\DropShop.sql" />
+    <Content Include="DataAccess\SqlScripts\Insertions.sql" />
+    <Content Include="DataAccess\SqlScripts\Procedures.sql" />
     <Content Include="ExternalScripts\bootstrap.js" />
     <Content Include="ExternalScripts\bootstrap.min.js" />
     <None Include="ExternalScripts\jquery-1.10.2.intellisense.js" />
@@ -159,7 +162,7 @@
     <Content Include="ExternalStyles\bootstrap.min.css" />
     <Content Include="ExternalStyles\Site.css" />
     <Content Include="Global.asax" />
-    <Content Include="DataAccess\CreateShop.sql" />
+    <Content Include="DataAccess\SqlScripts\CreateShop.sql" />
     <Content Include="systemjs.config.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -167,8 +170,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\ShopController.cs" />
-    <Compile Include="Controllers\ShopApiController.cs" />
+    <Compile Include="Controllers\CarsController.cs" />
+    <Compile Include="Controllers\WishListController.cs" />
     <Compile Include="DataAccess\IShopDbRepository.cs" />
     <Compile Include="DataAccess\ShopDbContext.cs" />
     <Compile Include="DataAccess\ShopDbRepository.cs" />
@@ -176,8 +181,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Car.cs" />
-    <Compile Include="Models\CartElem.cs" />
-    <Compile Include="Models\WishListElem.cs" />
+    <Compile Include="Models\CartElement.cs" />
+    <Compile Include="Models\WishListElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App_Start\IocConfig.cs" />
   </ItemGroup>
@@ -190,8 +195,6 @@
     <Content Include="packages.config" />
     <Content Include="package.json" />
     <Content Include="Views\Shop\Index.cshtml" />
-    <Content Include="Views\Shop\Cart.cshtml" />
-    <Content Include="Views\Shop\WishList.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -207,19 +210,22 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.routes.ts" />
     <TypeScriptCompile Include="app\cart\cart.component.ts" />
+    <TypeScriptCompile Include="app\shared\cart.service.ts" />
     <TypeScriptCompile Include="app\wishlist\wishlist.component.ts" />
     <TypeScriptCompile Include="app\wishlist\wishlist.module.ts" />
     <TypeScriptCompile Include="app\cart\cart.import.ts" />
     <TypeScriptCompile Include="app\cart\cart.module.ts" />
     <TypeScriptCompile Include="app\shared\car.ts" />
-    <TypeScriptCompile Include="app\app.component.ts" />
+    <TypeScriptCompile Include="app\cars\cars.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
-    <TypeScriptCompile Include="app\shared\data.service.ts" />
-    <TypeScriptCompile Include="app\car\car.component.ts" />
+    <TypeScriptCompile Include="app\shared\cars.service.ts" />
+    <TypeScriptCompile Include="app\cars\car.component.ts" />
     <TypeScriptCompile Include="app\main.ts" />
     <TypeScriptCompile Include="app\wishlist\wishlist.import.ts" />
+    <TypeScriptCompile Include="app\shared\wishlist.service.ts" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,5 +1,5 @@
 ﻿import { Component, OnInit } from '@angular/core';
-import { DataService } from '../shared/data.service';
+import { CartService } from '../shared/cart.service';
 import { Car } from '../shared/car';
 
 @Component({
@@ -23,30 +23,30 @@ import { Car } from '../shared/car';
                     <td>{{car.VehiclePower}} PS</td>
                     <td>{{car.MaximumSpeed}} km/h</td>
                     <td>{{car.Price}} $</td>
-                    <td><a (click)="cancel(i)" class="btn btn-info" role="button">Cancel</a></td>
+                    <td><a (click)="remove(car.Id)" class="btn btn-info" role="button">Remove</a></td>
                 </tr>
             </tbody>
         </table>
     </div>`,
-    providers: [DataService]
+    providers: [CartService]
 })
 export class CartComponent implements OnInit {
 
     cart: Array<Car> = [];
 
-    constructor(private dataService: DataService) { }
+    constructor(private cartService: CartService) { }
     ngOnInit() {
-        this.dataService.getCart().subscribe(res => {
+        this.cartService.getCart().subscribe(res => {
             this.cart = res;
             console.log(this.cart.length);
         });
     }
 
-    cancel(index: number) {
-        this.dataService.deleteFromCart(index);
-        this.dataService.getCart().subscribe(res => {
-            this.cart = res;
-        });
+    remove(carId: number) {
+        if (this.cartService.deleteFromCart(carId)) {
+            let index = this.cart.findIndex(car => car.Id === carId);
+            this.cart.splice(index, 1);
+        }
     }
 
 }

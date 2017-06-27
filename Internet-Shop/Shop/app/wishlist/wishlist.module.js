@@ -10,7 +10,8 @@ var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 var platform_browser_1 = require("@angular/platform-browser");
 var wishlist_component_1 = require("./wishlist.component");
-var data_service_1 = require("../shared/data.service");
+var cart_service_1 = require("../shared/cart.service");
+var wishlist_service_1 = require("../shared/wishlist.service");
 var WishListModule = (function () {
     function WishListModule() {
     }
@@ -21,7 +22,7 @@ WishListModule = __decorate([
         imports: [platform_browser_1.BrowserModule, http_1.HttpModule],
         declarations: [wishlist_component_1.WishListComponent],
         bootstrap: [wishlist_component_1.WishListComponent],
-        providers: [data_service_1.DataService]
+        providers: [cart_service_1.CartService, wishlist_service_1.WishListService]
     })
 ], WishListModule);
 exports.WishListModule = WishListModule;

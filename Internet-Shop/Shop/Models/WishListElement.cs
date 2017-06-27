@@ -3,13 +3,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Shop.Models
 {
-    [Table("Cart")]
-    public class CartElem
+    [Table("WishList")]
+    public class WishListElement
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public int IdCartElem { get; set; }
+        public int Id { get; set; }
         [Required]
-        public int IdCar { get; set; }
+        public int CarId { get; set; }
     }
 }

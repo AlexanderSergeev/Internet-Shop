@@ -9,10 +9,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 var platform_browser_1 = require("@angular/platform-browser");
-var app_component_1 = require("./app.component");
-var car_component_1 = require("./car/car.component");
+var cars_component_1 = require("./cars/cars.component");
+var car_component_1 = require("./cars/car.component");
 var app_routes_1 = require("./app.routes");
-var data_service_1 = require("./shared/data.service");
+var cars_service_1 = require("./shared/cars.service");
+var cart_service_1 = require("./shared/cart.service");
+var wishlist_service_1 = require("./shared/wishlist.service");
+var app_component_1 = require("./app.component");
+var cart_component_1 = require("./cart/cart.component");
+var wishlist_component_1 = require("./wishlist/wishlist.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -21,9 +26,9 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, http_1.HttpModule, app_routes_1.appRouterModule],
-        declarations: [app_component_1.AppComponent, car_component_1.CarComponent],
+        declarations: [cars_component_1.CarsComponent, car_component_1.CarComponent, wishlist_component_1.WishListComponent, cart_component_1.CartComponent, app_component_1.AppComponent],
         bootstrap: [app_component_1.AppComponent],
-        providers: [data_service_1.DataService]
+        providers: [cars_service_1.CarsService, cart_service_1.CartService, wishlist_service_1.WishListService]
     })
 ], AppModule);
 exports.AppModule = AppModule;

@@ -1,5 +1,6 @@
 ﻿import { Component, OnInit } from '@angular/core';
-import { DataService } from '../shared/data.service';
+import { CartService } from '../shared/cart.service';
+import { WishListService } from '../shared/wishlist.service';
 import { Car } from '../shared/car';
 
 @Component({
@@ -23,30 +24,34 @@ import { Car } from '../shared/car';
                     <td>{{car.VehiclePower}} PS</td>
                     <td>{{car.MaximumSpeed}} km/h</td>
                     <td>{{car.Price}} $</td>
-                    <td><a (click)="addToCart(car.Id)" class="btn btn-success" role="button">Add to cart</a> <a (click)="cancel()" class="btn btn-info" role="button">Cancel</a></td>
+                    <td><a (click)="addToCart(car.Id)" class="btn btn-success" role="button">Add to cart</a>
+                        <a (click)="remove(car.Id)" class="btn btn-info" role="button">Remove</a></td>
                 </tr>
             </tbody>
         </table>
     </div>`,
-    providers: [DataService]
+    providers: [CartService, WishListService]
 })
 export class WishListComponent implements OnInit {
 
     wishList: Car[] = [];
 
-    constructor(private dataService: DataService) { }
+    constructor(private wishListService: WishListService, private cartService: CartService) { }
     ngOnInit() {
-        this.dataService.getWishList().subscribe(res => {
+        this.wishListService.getWishList().subscribe(res => {
             this.wishList = res;
         });
     }
 
-    cancel() {
-
+    remove(carId: number) {
+        if (this.wishListService.deleteFromWishList(carId)) {
+            let index = this.wishList.findIndex(car => car.Id === carId);
+            this.wishList.splice(index, 1);
+        }
     }
 
     addToCart(idCar: number) {
-        this.dataService.addToCart(idCar);
+        this.cartService.addToCart(idCar);
     }
 
 }

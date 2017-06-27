@@ -1,7 +1,9 @@
 ﻿import { Component, OnInit, OnDestroy } from '@angular/core';
-import { DataService } from '../shared/data.service';
+import { CarsService } from '../shared/cars.service';
 import { Car } from '../shared/car';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CartService } from '../shared/cart.service';
+import { WishListService } from '../shared/wishlist.service';
 
 @Component({
     template: `
@@ -14,7 +16,7 @@ import { ActivatedRoute, Router } from '@angular/router';
         <a (click)="addToCart(car.Id)" class="btn btn-info" role="button">Add to Cart</a>
         <a (click)="addToWishList(car.Id)" class="btn btn-success" role="button">Add to Wish List</a>
     </div><br>`,
-    providers: [DataService]
+    providers: [CarsService, CartService, WishListService]
 })
 export class CarComponent implements OnInit, OnDestroy {
 
@@ -22,11 +24,11 @@ export class CarComponent implements OnInit, OnDestroy {
     sub: any;
 
 
-    constructor(private dataService: DataService, private route: ActivatedRoute, private router: Router) { }
+    constructor(private carsService: CarsService, private cartService: CartService, private wishListService: WishListService, private route: ActivatedRoute, private router: Router) { }
     ngOnInit() {
         this.sub = this.route.params.subscribe(params => {
-            let name = params["name"].toString();
-            this.dataService.getCar(name).subscribe(res => {
+            let id = Number.parseInt(params['id']);
+            this.carsService.getCar(id).subscribe(res => {
                 this.car = res;
             });
         });
@@ -37,10 +39,10 @@ export class CarComponent implements OnInit, OnDestroy {
     }
 
     addToCart(idCar: number) {
-        this.dataService.addToCart(idCar);
+        this.cartService.addToCart(idCar);
     }
 
     addToWishList(idCar: number) {
-        this.dataService.addToWishList(idCar);
+        this.wishListService.addToWishList(idCar);
     }
 }

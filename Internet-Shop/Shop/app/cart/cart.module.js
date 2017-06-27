@@ -10,7 +10,7 @@ var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 var platform_browser_1 = require("@angular/platform-browser");
 var cart_component_1 = require("./cart.component");
-var data_service_1 = require("../shared/data.service");
+var cart_service_1 = require("../shared/cart.service");
 var CartModule = (function () {
     function CartModule() {
     }
@@ -21,7 +21,7 @@ CartModule = __decorate([
         imports: [platform_browser_1.BrowserModule, http_1.HttpModule],
         declarations: [cart_component_1.CartComponent],
         bootstrap: [cart_component_1.CartComponent],
-        providers: [data_service_1.DataService]
+        providers: [cart_service_1.CartService]
     })
 ], CartModule);
 exports.CartModule = CartModule;
