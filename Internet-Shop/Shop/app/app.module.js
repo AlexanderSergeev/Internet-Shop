@@ -18,6 +18,8 @@ var wishlist_service_1 = require("./shared/wishlist.service");
 var app_component_1 = require("./app.component");
 var cart_component_1 = require("./cart/cart.component");
 var wishlist_component_1 = require("./wishlist/wishlist.component");
+var purchase_component_1 = require("./purchase/purchase.component");
+var forms_1 = require("@angular/forms");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -25,8 +27,8 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, http_1.HttpModule, app_routes_1.appRouterModule],
-        declarations: [cars_component_1.CarsComponent, car_component_1.CarComponent, wishlist_component_1.WishListComponent, cart_component_1.CartComponent, app_component_1.AppComponent],
+        imports: [platform_browser_1.BrowserModule, http_1.HttpModule, app_routes_1.appRouterModule, forms_1.FormsModule],
+        declarations: [cars_component_1.CarsComponent, car_component_1.CarComponent, wishlist_component_1.WishListComponent, cart_component_1.CartComponent, app_component_1.AppComponent, purchase_component_1.PurchaseComponent],
         bootstrap: [app_component_1.AppComponent],
         providers: [cars_service_1.CarsService, cart_service_1.CartService, wishlist_service_1.WishListService]
     })

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Data.SqlClient;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Shop.Models;
 
@@ -49,6 +47,18 @@ namespace Shop.DataAccess
             context.SaveChanges();
         }
 
+        public void AddToPurchase(PurchaseElement model)
+        {
+            IList<CartElement> cart = context.Cart.ToList();
+            foreach (CartElement elem in cart)
+            {
+                PurchaseElement addModel = model;
+                addModel.CarId = elem.CarId;
+                context.Purchases.Add(addModel);
+                context.SaveChanges();
+            }
+        }
+
         public void AddToWishList(WishListElement model)
         {
             context.WishList.Add(model);
@@ -65,6 +75,12 @@ namespace Shop.DataAccess
                     break;
                 }
             }
+            context.SaveChanges();
+        }
+
+        public void ClearCart()
+        {
+            context.Cart.RemoveRange(context.Cart);
             context.SaveChanges();
         }
 

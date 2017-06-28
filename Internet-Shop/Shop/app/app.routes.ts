@@ -3,6 +3,7 @@ import { CarComponent } from './cars/car.component';
 import { CarsComponent } from './cars/cars.component';
 import { CartComponent } from './cart/cart.component';
 import { WishListComponent } from './wishlist/wishlist.component';
+import { PurchaseComponent } from './purchase/purchase.component';
 
 const routes: Routes = [
     {
@@ -13,6 +14,9 @@ const routes: Routes = [
     },
     {
         path: 'wishlist', component: WishListComponent
+    },
+    {
+        path: 'purchase', component: PurchaseComponent
     },
     {
         path: 'cars', component: CarsComponent,

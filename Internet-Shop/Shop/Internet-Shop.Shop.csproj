@@ -182,6 +182,7 @@
     </Compile>
     <Compile Include="Models\Car.cs" />
     <Compile Include="Models\CartElement.cs" />
+    <Compile Include="Models\PurchaseElement.cs" />
     <Compile Include="Models\WishListElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App_Start\IocConfig.cs" />
@@ -213,18 +214,15 @@
     <TypeScriptCompile Include="app\app.component.ts" />
     <TypeScriptCompile Include="app\app.routes.ts" />
     <TypeScriptCompile Include="app\cart\cart.component.ts" />
+    <TypeScriptCompile Include="app\purchase\purchase.component.ts" />
     <TypeScriptCompile Include="app\shared\cart.service.ts" />
     <TypeScriptCompile Include="app\wishlist\wishlist.component.ts" />
-    <TypeScriptCompile Include="app\wishlist\wishlist.module.ts" />
-    <TypeScriptCompile Include="app\cart\cart.import.ts" />
-    <TypeScriptCompile Include="app\cart\cart.module.ts" />
     <TypeScriptCompile Include="app\shared\car.ts" />
     <TypeScriptCompile Include="app\cars\cars.component.ts" />
     <TypeScriptCompile Include="app\app.module.ts" />
     <TypeScriptCompile Include="app\shared\cars.service.ts" />
     <TypeScriptCompile Include="app\cars\car.component.ts" />
     <TypeScriptCompile Include="app\main.ts" />
-    <TypeScriptCompile Include="app\wishlist\wishlist.import.ts" />
     <TypeScriptCompile Include="app\shared\wishlist.service.ts" />
   </ItemGroup>
   <PropertyGroup>

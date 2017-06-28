@@ -15,9 +15,13 @@ namespace Shop.DataAccess
 
         void AddToCart(CartElement model);
 
+        void AddToPurchase(PurchaseElement model);
+
         void AddToWishList(WishListElement model);
 
         void DeleteFromCart(int carId);
+
+        void ClearCart();
 
         void DeleteFromWishList(int carId);
     }

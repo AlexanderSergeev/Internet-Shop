@@ -51,6 +51,15 @@ var WishListService = (function () {
         xhr.open('POST', '/api/wishlist', true);
         xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
         xhr.send(json);
+        xhr.onreadystatechange = function () {
+            if (xhr.status !== 200 && xhr.status !== 204) {
+                alert(xhr.status + ': ' + xhr.statusText);
+                return false;
+            }
+            return true;
+        };
+        alert('Adding successful!');
+        return true;
     };
     WishListService.prototype.deleteFromWishList = function (idCar) {
         var xhr = new XMLHttpRequest();

@@ -8,7 +8,8 @@ use Shop;
 go
 
 create table Cars (
-	Id int identity primary key,    
+	Id int identity primary key,
+	Picture text,	    
 	Name text,			
 	Price money,
 	VehiclePower int,
@@ -25,6 +26,15 @@ create table Cart (
 create table WishList (
 	Id int identity primary key,    
 	CarId int,
+	
+	foreign key (CarId) references Cars(Id) on update cascade		
+);
+
+create table Purchases (
+	Id int identity primary key,    
+	Name text,
+	OrderAddress text,			
+	CarId int
 	
 	foreign key (CarId) references Cars(Id) on update cascade		
 );

@@ -27,7 +27,7 @@ var CarsComponent = (function () {
 CarsComponent = __decorate([
     core_1.Component({
         selector: 'list-cars',
-        template: " \n    <div class=\"panel\">\n        <table class=\"table table-striped\">\n            <thead>\n                <tr>\n                    <th>Name</th> \n                    <th>Price</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let car of cars\">\n                    <td><a [routerLink]=\"['/cars', car.Id] \">{{car.Name}}</a></td>\n                    <td>{{car.Price}} $</td>\n                </tr>\n            </tbody>\n        </table>\n    </div><router-outlet></router-outlet>",
+        template: " \n    <div class=\"panel\">\n        <table class=\"table table-striped\">\n            <thead>\n                <tr>\n                    <th>Picture</th>\n                    <th>Name</th> \n                    <th>Price</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let car of cars\">\n                    <td><img src = \"{{car.Picture}}\" width=\"100\" height=\"80\"></td>\n                    <td><a [routerLink]=\"['/cars', car.Id] \">{{car.Name}}</a></td>\n                    <td>{{car.Price}} $</td>\n                </tr>\n            </tbody>\n        </table>\n    </div><router-outlet></router-outlet>",
         providers: [cars_service_1.CarsService]
     }),
     __metadata("design:paramtypes", [cars_service_1.CarsService])

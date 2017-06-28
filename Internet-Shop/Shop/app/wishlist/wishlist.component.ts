@@ -11,6 +11,7 @@ import { Car } from '../shared/car';
             <thead>
                 <tr>
                     <th>№</th> 
+                    <th>Picture</th>
                     <th>Name</th> 
                     <th>VehiclePower</th>
                     <th>MaximumSpeed</th>
@@ -20,6 +21,7 @@ import { Car } from '../shared/car';
             <tbody>
                 <tr *ngFor="let car of wishList; let i = index">
                     <td>{{i+1}}</td>
+                    <td><img src = "{{car.Picture}}" width="100" height="80"></td>
                     <td>{{car.Name}}</td>
                     <td>{{car.VehiclePower}} PS</td>
                     <td>{{car.MaximumSpeed}} km/h</td>

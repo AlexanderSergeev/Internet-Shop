@@ -20,7 +20,6 @@ var CartComponent = (function () {
         var _this = this;
         this.cartService.getCart().subscribe(function (res) {
             _this.cart = res;
-            console.log(_this.cart.length);
         });
     };
     CartComponent.prototype.remove = function (carId) {
@@ -29,12 +28,20 @@ var CartComponent = (function () {
             this.cart.splice(index, 1);
         }
     };
+    CartComponent.prototype.getSum = function () {
+        var sum = 0;
+        for (var _i = 0, _a = this.cart; _i < _a.length; _i++) {
+            var c = _a[_i];
+            sum = sum + c.Price;
+        }
+        return sum;
+    };
     return CartComponent;
 }());
 CartComponent = __decorate([
     core_1.Component({
         selector: 'list-cart',
-        template: "\n    <div class=\"panel\">\n        <table class=\"table table-striped\">\n            <thead>\n                <tr>\n                    <th>\u2116</th> \n                    <th>Name</th> \n                    <th>VehiclePower</th>\n                    <th>MaximumSpeed</th>\n                    <th>Price</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let car of cart; let i = index\">\n                    <td>{{i+1}}</td>\n                    <td>{{car.Name}}</td>\n                    <td>{{car.VehiclePower}} PS</td>\n                    <td>{{car.MaximumSpeed}} km/h</td>\n                    <td>{{car.Price}} $</td>\n                    <td><a (click)=\"remove(car.Id)\" class=\"btn btn-info\" role=\"button\">Remove</a></td>\n                </tr>\n            </tbody>\n        </table>\n    </div>",
+        template: "\n    <div class=\"panel\">\n        <table class=\"table table-striped\">\n            <thead>\n                <tr>\n                    <th>\u2116</th> \n                    <th>Picture</th> \n                    <th>Name</th> \n                    <th>VehiclePower</th>\n                    <th>MaximumSpeed</th>\n                    <th>Price</th>\n                </tr>\n            </thead>\n            <tbody>\n                <tr *ngFor=\"let car of cart; let i = index\">\n                    <td>{{i+1}}</td>\n                    <td><img src = \"{{car.Picture}}\" width=\"100\" height=\"80\"></td>\n                    <td>{{car.Name}}</td>\n                    <td>{{car.VehiclePower}} PS</td>\n                    <td>{{car.MaximumSpeed}} km/h</td>\n                    <td>{{car.Price}} $</td>\n                    <td><a (click)=\"remove(car.Id)\" class=\"btn btn-info\" role=\"button\">Remove</a></td>\n                </tr>\n            <tr>\n                <td>Total:</td>\n                <td></td>\n                <td></td>\n                <td></td>\n                <td></td>\n                <td>{{getSum()}} $</td>\n                <td><a *ngIf=\"getSum()!==0\" [routerLink]=\"['/purchase'] \" class=\"btn btn-primary\" role=\"button\">Buy All</a></td>\n            </tr>\n            </tbody>\n        </table>\n    </div>",
         providers: [cart_service_1.CartService]
     }),
     __metadata("design:paramtypes", [cart_service_1.CartService])

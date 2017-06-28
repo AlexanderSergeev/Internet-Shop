@@ -10,6 +10,7 @@ import { Car } from '../shared/car';
             <thead>
                 <tr>
                     <th>№</th> 
+                    <th>Picture</th> 
                     <th>Name</th> 
                     <th>VehiclePower</th>
                     <th>MaximumSpeed</th>
@@ -19,12 +20,22 @@ import { Car } from '../shared/car';
             <tbody>
                 <tr *ngFor="let car of cart; let i = index">
                     <td>{{i+1}}</td>
+                    <td><img src = "{{car.Picture}}" width="100" height="80"></td>
                     <td>{{car.Name}}</td>
                     <td>{{car.VehiclePower}} PS</td>
                     <td>{{car.MaximumSpeed}} km/h</td>
                     <td>{{car.Price}} $</td>
                     <td><a (click)="remove(car.Id)" class="btn btn-info" role="button">Remove</a></td>
                 </tr>
+            <tr>
+                <td>Total:</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{getSum()}} $</td>
+                <td><a *ngIf="getSum()!==0" [routerLink]="['/purchase'] " class="btn btn-primary" role="button">Buy All</a></td>
+            </tr>
             </tbody>
         </table>
     </div>`,
@@ -38,7 +49,6 @@ export class CartComponent implements OnInit {
     ngOnInit() {
         this.cartService.getCart().subscribe(res => {
             this.cart = res;
-            console.log(this.cart.length);
         });
     }
 
@@ -49,4 +59,11 @@ export class CartComponent implements OnInit {
         }
     }
 
+    getSum(): number {
+        let sum = 0;
+        for (let c of this.cart) {
+            sum = sum + c.Price;
+        }
+        return sum;
+    }
 }

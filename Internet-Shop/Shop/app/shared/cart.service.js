@@ -29,6 +29,20 @@ var CartService = (function () {
         xhr.open('POST', '/api/cart', true);
         xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
         xhr.send(json);
+        xhr.onreadystatechange = function () {
+            if (xhr.status !== 200 && xhr.status !== 204) {
+                alert(xhr.status + ': ' + xhr.statusText);
+                return false;
+            }
+            alert('Adding successful!');
+            return true;
+        };
+        return true;
+    };
+    CartService.prototype.clearCart = function () {
+        var xhr = new XMLHttpRequest();
+        xhr.open('DELETE', '/api/cart/', true);
+        xhr.send();
     };
     CartService.prototype.deleteFromCart = function (idCar) {
         var xhr = new XMLHttpRequest();
@@ -41,6 +55,25 @@ var CartService = (function () {
             }
             return true;
         };
+        return true;
+    };
+    CartService.prototype.addToPurchase = function (name, address) {
+        var xhr = new XMLHttpRequest();
+        var json = JSON.stringify({
+            Name: name,
+            OrderAddress: address
+        });
+        xhr.open('POST', '/api/cart/purchase', true);
+        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+        xhr.send(json);
+        xhr.onreadystatechange = function () {
+            if (xhr.status !== 200 && xhr.status !== 204) {
+                alert(xhr.status + ': ' + xhr.statusText);
+                return false;
+            }
+            return true;
+        };
+        alert('Purchase successful!');
         return true;
     };
     return CartService;

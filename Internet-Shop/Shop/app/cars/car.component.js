@@ -44,7 +44,7 @@ var CarComponent = (function () {
 }());
 CarComponent = __decorate([
     core_1.Component({
-        template: "\n     <div class=\"container\">\n        <b>{{car?.Name}} info:</b> \n        <br>\n        <p>Price: {{car?.Price}}$</p>\n        <p>VehiclePower: {{car?.VehiclePower}} PS</p> \n        <p>MaximumSpeed: {{car?.MaximumSpeed}} km/h</p> \n        <a (click)=\"addToCart(car.Id)\" class=\"btn btn-info\" role=\"button\">Add to Cart</a>\n        <a (click)=\"addToWishList(car.Id)\" class=\"btn btn-success\" role=\"button\">Add to Wish List</a>\n    </div><br>",
+        template: "\n     <div class=\"container\">\n        <b>{{car?.Name}} info:</b> \n        <br>\n        <img src = \"{{car?.Picture}}\" width=\"100\" height=\"80\">\n        <br>\n        <p>Price: {{car?.Price}}$</p>\n        <p>VehiclePower: {{car?.VehiclePower}} PS</p> \n        <p>MaximumSpeed: {{car?.MaximumSpeed}} km/h</p> \n        <a (click)=\"addToCart(car.Id)\" class=\"btn btn-info\" role=\"button\">Add to Cart</a>\n        <a (click)=\"addToWishList(car.Id)\" class=\"btn btn-success\" role=\"button\">Add to Wish List</a>\n    </div><br>",
         providers: [cars_service_1.CarsService, cart_service_1.CartService, wishlist_service_1.WishListService]
     }),
     __metadata("design:paramtypes", [cars_service_1.CarsService, cart_service_1.CartService, wishlist_service_1.WishListService, router_1.ActivatedRoute, router_1.Router])

@@ -15,5 +15,7 @@ namespace Shop.DataAccess
         public DbSet<CartElement> Cart { get; set; }
 
         public DbSet<WishListElement> WishList { get; set; }
+
+        public DbSet<PurchaseElement> Purchases { get; set; }
     }
 }

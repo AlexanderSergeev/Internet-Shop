@@ -3,6 +3,8 @@ Internet-Shop/.vs/*
 Internet-Shop/packages/*
 Internet-Shop/Shop/bin/*
 Internet-Shop/Shop/obj/*
+Internet-Shop/Shop/obj
+Internet-Shop/Shop/bin
 bin
 obj
 packages

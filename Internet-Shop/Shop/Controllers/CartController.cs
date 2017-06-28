@@ -39,12 +39,28 @@ namespace Shop.Controllers
             repository.AddToCart(model);
         }
 
+        [Route("purchase")]
+        [HttpPost]
+        public void AddToPurchase([FromBody]PurchaseElement model)
+        {
+            log.Info("Adding to purchase list");
+            repository.AddToPurchase(model);
+        }
+
         [Route("{carId}")]
         [HttpDelete]
         public void DeleteFromCart(int carId)
         {
             log.Info("Deleting grom cart");
             repository.DeleteFromCart(carId);
+        }
+
+        [Route]
+        [HttpDelete]
+        public void ClearCart()
+        {
+            log.Info("Clearing cart");
+            repository.ClearCart();
         }
     }
 }

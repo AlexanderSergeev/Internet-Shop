@@ -10,10 +10,12 @@ import { WishListService } from './shared/wishlist.service';
 import { AppComponent } from './app.component';
 import { CartComponent } from './cart/cart.component';
 import { WishListComponent } from './wishlist/wishlist.component';
+import { PurchaseComponent } from './purchase/purchase.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-    imports: [BrowserModule, HttpModule, appRouterModule],
-    declarations: [CarsComponent, CarComponent, WishListComponent, CartComponent, AppComponent],
+    imports: [BrowserModule, HttpModule, appRouterModule, FormsModule],
+    declarations: [CarsComponent, CarComponent, WishListComponent, CartComponent, AppComponent, PurchaseComponent],
     bootstrap: [AppComponent],
     providers: [CarsService, CartService, WishListService]
 })

@@ -5,6 +5,7 @@ var car_component_1 = require("./cars/car.component");
 var cars_component_1 = require("./cars/cars.component");
 var cart_component_1 = require("./cart/cart.component");
 var wishlist_component_1 = require("./wishlist/wishlist.component");
+var purchase_component_1 = require("./purchase/purchase.component");
 var routes = [
     {
         path: '', redirectTo: 'cars', pathMatch: 'full'
@@ -14,6 +15,9 @@ var routes = [
     },
     {
         path: 'wishlist', component: wishlist_component_1.WishListComponent
+    },
+    {
+        path: 'purchase', component: purchase_component_1.PurchaseComponent
     },
     {
         path: 'cars', component: cars_component_1.CarsComponent,

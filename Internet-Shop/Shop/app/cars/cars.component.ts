@@ -9,12 +9,14 @@ import { Car } from '../shared/car';
         <table class="table table-striped">
             <thead>
                 <tr>
+                    <th>Picture</th>
                     <th>Name</th> 
                     <th>Price</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let car of cars">
+                    <td><img src = "{{car.Picture}}" width="100" height="80"></td>
                     <td><a [routerLink]="['/cars', car.Id] ">{{car.Name}}</a></td>
                     <td>{{car.Price}} $</td>
                 </tr>

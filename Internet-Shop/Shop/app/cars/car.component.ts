@@ -10,6 +10,8 @@ import { WishListService } from '../shared/wishlist.service';
      <div class="container">
         <b>{{car?.Name}} info:</b> 
         <br>
+        <img src = "{{car?.Picture}}" width="100" height="80">
+        <br>
         <p>Price: {{car?.Price}}$</p>
         <p>VehiclePower: {{car?.VehiclePower}} PS</p> 
         <p>MaximumSpeed: {{car?.MaximumSpeed}} km/h</p> 

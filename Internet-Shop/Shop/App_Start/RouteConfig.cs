@@ -10,10 +10,10 @@ namespace Shop
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Shop", action = "Index", id = UrlParameter.Optional }
-            );
+                        name: "Default",
+                        url: "{name}/{id}",
+                        defaults: new { controller = "Shop", action = "Index", id = UrlParameter.Optional, name = UrlParameter.Optional }
+                    );
         }
     }
 }
