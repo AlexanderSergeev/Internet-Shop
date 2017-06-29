@@ -60,9 +60,10 @@ export class PurchaseComponent implements OnInit {
     }
 
     order(name: string, address: string) {
-        if (this.cartService.addToPurchase(name, address)) {
-            this.cartService.clearCart();
-        }
+        const purchaseComponent = this;
+        purchaseComponent.cartService.addToPurchase(name, address, function () {
+            purchaseComponent.cartService.clearCart();
+        });
     }
 
 }

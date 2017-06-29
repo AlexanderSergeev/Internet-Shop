@@ -32,9 +32,10 @@ var PurchaseComponent = (function () {
         return sum;
     };
     PurchaseComponent.prototype.order = function (name, address) {
-        if (this.cartService.addToPurchase(name, address)) {
-            this.cartService.clearCart();
-        }
+        var purchaseComponent = this;
+        purchaseComponent.cartService.addToPurchase(name, address, function () {
+            purchaseComponent.cartService.clearCart();
+        });
     };
     return PurchaseComponent;
 }());

@@ -60,7 +60,7 @@ var CartService = (function () {
             }
         };
     };
-    CartService.prototype.addToPurchase = function (name, address) {
+    CartService.prototype.addToPurchase = function (name, address, callback) {
         var xhr = new XMLHttpRequest();
         var json = JSON.stringify({
             Name: name,
@@ -74,6 +74,7 @@ var CartService = (function () {
                 return;
             if (xhr.status === 200 || xhr.status === 204) {
                 alert("Purchase successful");
+                callback();
             }
             else {
                 alert(xhr.status + ': ' + xhr.statusText);

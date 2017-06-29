@@ -55,7 +55,7 @@ export class CartService {
         }
     }
 
-    addToPurchase(name: string, address: string) {
+    addToPurchase(name: string, address: string, callback: Function) {
         var xhr = new XMLHttpRequest();
 
         var json = JSON.stringify({
@@ -70,6 +70,7 @@ export class CartService {
             if (xhr.readyState !== 4) return;
             if (xhr.status === 200 || xhr.status === 204) {
                 alert("Purchase successful");
+                callback();
             } else {
                 alert(xhr.status + ': ' + xhr.statusText);
             }

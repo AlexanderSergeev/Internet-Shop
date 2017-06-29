@@ -61,7 +61,7 @@ namespace Shop.DataAccess
 
         public void AddToPurchase(PurchaseElement model)
         {
-            log.Info("Adding to purchases model with Name " + model.Name);
+            log.Info("Adding to purchases models with Name " + model.Name);
             IList<CartElement> cart = context.Cart.ToList();
             foreach (CartElement elem in cart)
             {
