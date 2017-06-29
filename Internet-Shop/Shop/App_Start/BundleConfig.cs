@@ -6,22 +6,22 @@ namespace Chat
     {
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/ExternalScripts/jquery").Include(
-                         "~/ExternalScripts/jquery-{version}.js"));
+            bundles.Add(new ScriptBundle("~/external/Scripts/jquery").Include(
+                         "~/external/Scripts/jquery-{version}.js"));
 
-            bundles.Add(new ScriptBundle("~/ExternalScripts/jqueryval").Include(
-                        "~/ExternalScripts/jquery.validate*"));
+            bundles.Add(new ScriptBundle("~/external/Scripts/jqueryval").Include(
+                        "~/external/Scripts/jquery.validate*"));
 
-            bundles.Add(new ScriptBundle("~/ExternalScripts/modernizr").Include(
-                        "~/ExternalScripts/modernizr-*"));
+            bundles.Add(new ScriptBundle("~/external/Scripts/modernizr").Include(
+                        "~/external/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/ExternalScripts/bootstrap").Include(
-                      "~/ExternalScripts/bootstrap.js",
-                      "~/ExternalScripts/respond.js"));
+            bundles.Add(new ScriptBundle("~/external/Scripts/bootstrap").Include(
+                      "~/external/Scripts/bootstrap.js",
+                      "~/external/Scripts/respond.js"));
 
-            bundles.Add(new StyleBundle("~/ExternalStyles/css").Include(
-                      "~/ExternalStyles/bootstrap.css",
-                      "~/ExternalStyles/site.css"));
+            bundles.Add(new StyleBundle("~/external/Styles/css").Include(
+                      "~/external/Styles/bootstrap.css",
+                      "~/external/Styles/site.css"));
         }
     }
 }

@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Internet-Shop</title>
     @using System.Web.Optimization
-    @Styles.Render("~/ExternalStyles/css")
-    @Scripts.Render("~/ExternalScripts/modernizr")
+    @Styles.Render("~/external/Styles/css")
+    @Scripts.Render("~/external/Scripts/modernizr")
 
 </head>
 <body>
     <div class="container body-content">
         @RenderBody()
     </div>
-    @Scripts.Render("~/ExternalScripts/jquery")
-    @Scripts.Render("~/ExternalScripts/bootstrap")
+    @Scripts.Render("~/external/Scripts/jquery")
+    @Scripts.Render("~/external/Scripts/bootstrap")
     @RenderSection("scripts", required: false)
 </body>
 </html>

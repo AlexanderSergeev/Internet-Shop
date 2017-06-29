@@ -38,7 +38,9 @@ var CarComponent = (function () {
         this.cartService.addToCart(idCar);
     };
     CarComponent.prototype.addToWishList = function (idCar) {
-        this.wishListService.addToWishList(idCar);
+        this.wishListService.addToWishList(idCar).subscribe(function () {
+            alert("Adding successful");
+        });
     };
     return CarComponent;
 }());

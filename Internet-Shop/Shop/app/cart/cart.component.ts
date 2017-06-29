@@ -53,10 +53,12 @@ export class CartComponent implements OnInit {
     }
 
     remove(carId: number) {
-        if (this.cartService.deleteFromCart(carId)) {
-            let index = this.cart.findIndex(car => car.Id === carId);
-            this.cart.splice(index, 1);
-        }
+        const cartComponent = this;
+        cartComponent.cartService.deleteFromCart(carId, function () {
+            let index = cartComponent.cart.findIndex(car => car.Id === carId);
+            cartComponent.cart.splice(index, 1);
+        });
+
     }
 
     getSum(): number {

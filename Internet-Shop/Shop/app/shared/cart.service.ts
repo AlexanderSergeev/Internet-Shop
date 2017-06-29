@@ -1,6 +1,5 @@
 ﻿import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { Car } from '../shared/car';
 import 'rxjs/add/operator/map';
 
 @Injectable()
@@ -15,25 +14,23 @@ export class CartService {
     }
 
 
-    addToCart(idCar: number): boolean {
+    addToCart(idCar: number) {
         var xhr = new XMLHttpRequest();
 
         var json = JSON.stringify({
             CarId: idCar
         });
-
         xhr.open('POST', '/api/cart', true);
         xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
         xhr.send(json);
         xhr.onreadystatechange = function () {
-            if (xhr.status !== 200 && xhr.status !== 204) {
+            if (xhr.readyState !== 4) return;
+            if (xhr.status === 200 || xhr.status === 204) {
+                alert("Adding successful");
+            } else {
                 alert(xhr.status + ': ' + xhr.statusText);
-                return false;
             }
-            alert('Adding successful!');
-            return true;
         }
-        return true;
     }
 
     clearCart() {
@@ -43,22 +40,22 @@ export class CartService {
         xhr.send();
     }
 
-    deleteFromCart(idCar: number): boolean {
+    deleteFromCart(idCar: number, callback: Function) {
         var xhr = new XMLHttpRequest();
 
         xhr.open('DELETE', '/api/cart/' + idCar, true);
         xhr.send();
         xhr.onreadystatechange = function () {
-            if (xhr.status !== 200 && xhr.status !== 204) {
+            if (xhr.readyState !== 4) return;
+            if (xhr.status === 200 || xhr.status === 204) {
+                callback();
+            } else {
                 alert(xhr.status + ': ' + xhr.statusText);
-                return false;
             }
-            return true;
         }
-        return true;
     }
 
-    addToPurchase(name: string, address: string): boolean {
+    addToPurchase(name: string, address: string) {
         var xhr = new XMLHttpRequest();
 
         var json = JSON.stringify({
@@ -70,13 +67,12 @@ export class CartService {
         xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
         xhr.send(json);
         xhr.onreadystatechange = function () {
-            if (xhr.status !== 200 && xhr.status !== 204) {
+            if (xhr.readyState !== 4) return;
+            if (xhr.status === 200 || xhr.status === 204) {
+                alert("Purchase successful");
+            } else {
                 alert(xhr.status + ': ' + xhr.statusText);
-                return false;
             }
-            return true;
         }
-        alert('Purchase successful!');
-        return true;
     }
 }

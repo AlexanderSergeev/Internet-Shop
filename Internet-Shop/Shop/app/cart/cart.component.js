@@ -23,10 +23,11 @@ var CartComponent = (function () {
         });
     };
     CartComponent.prototype.remove = function (carId) {
-        if (this.cartService.deleteFromCart(carId)) {
-            var index = this.cart.findIndex(function (car) { return car.Id === carId; });
-            this.cart.splice(index, 1);
-        }
+        var cartComponent = this;
+        cartComponent.cartService.deleteFromCart(carId, function () {
+            var index = cartComponent.cart.findIndex(function (car) { return car.Id === carId; });
+            cartComponent.cart.splice(index, 1);
+        });
     };
     CartComponent.prototype.getSum = function () {
         var sum = 0;

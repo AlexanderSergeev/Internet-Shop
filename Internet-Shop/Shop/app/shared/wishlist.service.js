@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
+var Observable_1 = require("rxjs/Observable");
 require("rxjs/add/operator/map");
 require("rxjs/add/operator/catch");
 require("rxjs/add/observable/throw");
@@ -23,56 +24,28 @@ var WishListService = (function () {
             .get('/api/wishlist')
             .map(function (res) { return res.json(); });
     };
+    WishListService.prototype.extractData = function (res) {
+        var body = res.json();
+        return body || {};
+    };
+    WishListService.prototype.handleErrorObservable = function (error) {
+        console.error(error.message || error);
+        return Observable_1.Observable.throw(error.message || error);
+    };
     WishListService.prototype.addToWishList = function (idCar) {
-        /*
-        const body = JSON.stringify({
+        var body = {
             CarId: idCar
-        });
-
-        let headers = new Headers({ 'Content-Type': 'application/json; charset=utf-8' });
-        console.log(body);
-
-        try {
-            return this.http.post('/api/wishlist', body, { headers: headers })
-                .map((resp: Response) => {
-                    console.log('success');
-                    return resp.json();
-                })
-                .catch((error: any) => { return Observable.throw(error); });
-        } catch (e) {
-            console.error(e);
-        }
-        
-        */
-        var xhr = new XMLHttpRequest();
-        var json = JSON.stringify({
-            CarId: idCar
-        });
-        xhr.open('POST', '/api/wishlist', true);
-        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-        xhr.send(json);
-        xhr.onreadystatechange = function () {
-            if (xhr.status !== 200 && xhr.status !== 204) {
-                alert(xhr.status + ': ' + xhr.statusText);
-                return false;
-            }
-            return true;
         };
-        alert('Adding successful!');
-        return true;
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
+        var options = new http_1.RequestOptions({ headers: headers });
+        return this.http.post('/api/wishlist', body, options)
+            .map(this.extractData)
+            .catch(this.handleErrorObservable);
     };
     WishListService.prototype.deleteFromWishList = function (idCar) {
-        var xhr = new XMLHttpRequest();
-        xhr.open('DELETE', '/api/wishlist/' + idCar, true);
-        xhr.send();
-        xhr.onreadystatechange = function () {
-            if (xhr.status !== 200 && xhr.status !== 204) {
-                alert(xhr.status + ': ' + xhr.statusText);
-                return false;
-            }
-            return true;
-        };
-        return true;
+        return this.http.delete('/api/wishlist/' + idCar)
+            .map(this.extractData)
+            .catch(this.handleErrorObservable);
     };
     return WishListService;
 }());

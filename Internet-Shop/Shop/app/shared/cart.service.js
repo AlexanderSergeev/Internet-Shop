@@ -30,32 +30,35 @@ var CartService = (function () {
         xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
         xhr.send(json);
         xhr.onreadystatechange = function () {
-            if (xhr.status !== 200 && xhr.status !== 204) {
-                alert(xhr.status + ': ' + xhr.statusText);
-                return false;
+            if (xhr.readyState !== 4)
+                return;
+            if (xhr.status === 200 || xhr.status === 204) {
+                alert("Adding successful");
             }
-            alert('Adding successful!');
-            return true;
+            else {
+                alert(xhr.status + ': ' + xhr.statusText);
+            }
         };
-        return true;
     };
     CartService.prototype.clearCart = function () {
         var xhr = new XMLHttpRequest();
         xhr.open('DELETE', '/api/cart/', true);
         xhr.send();
     };
-    CartService.prototype.deleteFromCart = function (idCar) {
+    CartService.prototype.deleteFromCart = function (idCar, callback) {
         var xhr = new XMLHttpRequest();
         xhr.open('DELETE', '/api/cart/' + idCar, true);
         xhr.send();
         xhr.onreadystatechange = function () {
-            if (xhr.status !== 200 && xhr.status !== 204) {
-                alert(xhr.status + ': ' + xhr.statusText);
-                return false;
+            if (xhr.readyState !== 4)
+                return;
+            if (xhr.status === 200 || xhr.status === 204) {
+                callback();
             }
-            return true;
+            else {
+                alert(xhr.status + ': ' + xhr.statusText);
+            }
         };
-        return true;
     };
     CartService.prototype.addToPurchase = function (name, address) {
         var xhr = new XMLHttpRequest();
@@ -67,14 +70,15 @@ var CartService = (function () {
         xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
         xhr.send(json);
         xhr.onreadystatechange = function () {
-            if (xhr.status !== 200 && xhr.status !== 204) {
-                alert(xhr.status + ': ' + xhr.statusText);
-                return false;
+            if (xhr.readyState !== 4)
+                return;
+            if (xhr.status === 200 || xhr.status === 204) {
+                alert("Purchase successful");
             }
-            return true;
+            else {
+                alert(xhr.status + ': ' + xhr.statusText);
+            }
         };
-        alert('Purchase successful!');
-        return true;
     };
     return CartService;
 }());

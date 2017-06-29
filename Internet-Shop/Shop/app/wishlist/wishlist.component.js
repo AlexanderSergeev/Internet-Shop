@@ -25,10 +25,11 @@ var WishListComponent = (function () {
         });
     };
     WishListComponent.prototype.remove = function (carId) {
-        if (this.wishListService.deleteFromWishList(carId)) {
-            var index = this.wishList.findIndex(function (car) { return car.Id === carId; });
-            this.wishList.splice(index, 1);
-        }
+        var wishListComponent = this;
+        this.wishListService.deleteFromWishList(carId).subscribe(function () {
+            var index = wishListComponent.wishList.findIndex(function (car) { return car.Id === carId; });
+            wishListComponent.wishList.splice(index, 1);
+        });
     };
     WishListComponent.prototype.addToCart = function (idCar) {
         this.cartService.addToCart(idCar);

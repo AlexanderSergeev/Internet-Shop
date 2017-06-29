@@ -22,8 +22,11 @@ var routes = [
     {
         path: 'cars', component: cars_component_1.CarsComponent,
         children: [
-            { path: ':id', component: car_component_1.CarComponent }
+            { path: ':id', component: car_component_1.CarComponent },
         ]
+    },
+    {
+        path: '**', redirectTo: 'cars', pathMatch: 'full'
     }
 ];
 exports.appRouterModule = router_1.RouterModule.forRoot(routes);

@@ -21,8 +21,11 @@ const routes: Routes = [
     {
         path: 'cars', component: CarsComponent,
         children: [
-            { path: ':id', component: CarComponent }
+            { path: ':id', component: CarComponent },
         ]
+    },
+    {
+        path: '**', redirectTo: 'cars', pathMatch: 'full'
     }
 ];
 

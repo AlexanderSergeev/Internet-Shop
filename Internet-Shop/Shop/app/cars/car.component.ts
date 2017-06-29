@@ -45,6 +45,8 @@ export class CarComponent implements OnInit, OnDestroy {
     }
 
     addToWishList(idCar: number) {
-        this.wishListService.addToWishList(idCar);
+        this.wishListService.addToWishList(idCar).subscribe(function () {
+            alert("Adding successful");
+        });
     }
 }

@@ -1,5 +1,5 @@
 ﻿import { Injectable } from '@angular/core';
-import { Http, Headers, Response } from '@angular/http';
+import { Http, Headers, RequestOptions, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
@@ -16,61 +16,32 @@ export class WishListService {
             .map(res => res.json());
     }
 
-    addToWishList(idCar: number) {
-        /*
-        const body = JSON.stringify({
-            CarId: idCar
-        });
-
-        let headers = new Headers({ 'Content-Type': 'application/json; charset=utf-8' });
-        console.log(body);
-
-        try {
-            return this.http.post('/api/wishlist', body, { headers: headers })
-                .map((resp: Response) => {
-                    console.log('success');
-                    return resp.json();
-                })
-                .catch((error: any) => { return Observable.throw(error); });     
-        } catch (e) {
-            console.error(e);
-        } 
-        
-        */
-        
-        var xhr = new XMLHttpRequest();
-
-        var json = JSON.stringify({
-            CarId: idCar
-        });
-
-        xhr.open('POST', '/api/wishlist', true);
-        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-        xhr.send(json);
-
-        xhr.onreadystatechange = function () {
-            if (xhr.status !== 200 && xhr.status !== 204) {
-                alert(xhr.status + ': ' + xhr.statusText);
-                return false;
-            }
-            return true;
-        }
-        alert('Adding successful!');
-        return true;
+    private extractData(res: Response) {
+        let body = res.json();
+        return body || {};
+    }
+    private handleErrorObservable(error: Response | any) {
+        console.error(error.message || error);
+        return Observable.throw(error.message || error);
     }
 
-    deleteFromWishList(idCar: number): boolean {
-        var xhr = new XMLHttpRequest();
+    addToWishList(idCar: number) {
 
-        xhr.open('DELETE', '/api/wishlist/' + idCar, true);
-        xhr.send();
-        xhr.onreadystatechange = function () {
-            if (xhr.status !== 200 && xhr.status !== 204) {
-                alert(xhr.status + ': ' + xhr.statusText);
-                return false;
-            }
-            return true;
-        }
-        return true;
+        const body = {
+            CarId: idCar
+        };
+
+        let headers = new Headers({ 'Content-Type': 'application/json' });
+        let options = new RequestOptions({ headers: headers });
+        return this.http.post('/api/wishlist', body, options)
+            .map(this.extractData)
+            .catch(this.handleErrorObservable);
+    }
+
+    deleteFromWishList(idCar: number) {
+
+        return this.http.delete('/api/wishlist/' + idCar)
+            .map(this.extractData)
+            .catch(this.handleErrorObservable);
     }
 }

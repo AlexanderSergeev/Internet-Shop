@@ -46,10 +46,11 @@ export class WishListComponent implements OnInit {
     }
 
     remove(carId: number) {
-        if (this.wishListService.deleteFromWishList(carId)) {
-            let index = this.wishList.findIndex(car => car.Id === carId);
-            this.wishList.splice(index, 1);
-        }
+        const wishListComponent = this;
+        this.wishListService.deleteFromWishList(carId).subscribe(function () {
+            let index = wishListComponent.wishList.findIndex(car => car.Id === carId);
+            wishListComponent.wishList.splice(index, 1);
+        });
     }
 
     addToCart(idCar: number) {
